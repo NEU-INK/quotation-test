@@ -1,0 +1,82 @@
+.productQuotation {
+  width: 100%;
+  padding: 5% 5% 0;
+}
+
+.stepContainer {
+  margin-bottom: 18px;
+}
+
+.optionContainer {
+  display: flex;
+  // justify-content: space-between;
+}
+
+.stepTitle {
+  margin-bottom: 4px;
+  font-family: 'HS';
+  font-weight: bold;
+  color: #003680;
+}
+
+.optionItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 200px;
+  margin-right: 28px;
+  border: 1px solid #003680;
+  padding: 10px 16px;
+  border-radius: 12px;
+  font-size: 2.9rem;
+  color: #003680;
+  // box-shadow: 3px 6px 6px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.optionItemSelected{
+  background-color: #8CB6D8;
+}
+
+.quantityContainer {
+  position: relative;
+}
+
+.quantityContainerDisabled {
+  padding: 14px;
+  cursor: not-allowed !important;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    width: calc(100% - 28px);
+    height: calc(100% - 28px);
+  border-radius: 12px;
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+}
+
+.quantityInput {
+  width: 100%;
+  padding: 14px;
+  border-radius: 12px;
+  font-size: 2rem;
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+
+.dialogContent{
+  padding: 16px 24px;
+}
+
+.dialogFooter{
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 24px;
+}

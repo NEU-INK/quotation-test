@@ -1,0 +1,294 @@
+/*
+.mapComponent {
+    color: #13357b;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+}
+!* 内容容器样式 *!
+.content {
+    //background: rgb(255, 0, 0);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+}
+!* 顶部内容样式 *!
+.contentTop {
+    height: 18%;
+    display: flex;
+    align-items: start;
+    text-align: left;
+}
+.punctuationBox {
+    height: 82%;
+    position: relative;
+}
+!* 适配移动端 *!
+@media (max-width: 768px) {
+}
+*/
+/*
+
+
+.mapComponent {
+    color: #13357b;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+}
+
+.contentTop {
+    height: 18%;
+    display: flex;
+    align-items: start;
+    text-align: left;
+}
+
+.punctuationBox {
+    height: 82%;
+    position: relative;
+}
+
+.point {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.dashedLine {
+    width: 2px;
+    height: 50px;
+    border-left: 1px dashed #13357b;
+}
+
+!* Dashed line configurations based on point position *!
+.left {
+    transform: rotate(90deg);
+}
+
+.right {
+    transform: rotate(-90deg);
+}
+
+.top-right {
+    transform: rotate(45deg);
+}
+
+.pointLabel {
+    font-size: 1.5vw;
+    text-align: center;
+}
+
+.modalContent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%; !* Scaled to component *!
+    height: 80%;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.closeButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+!* Mobile responsive styles *!
+@media (max-width: 768px) {
+    .point {
+        width: 8vw; !* Icons size scales down *!
+        height: 8vw;
+    }
+
+    .pointLabel {
+        font-size: 3vw;
+    }
+
+    .modalContent {
+        width: 90%; !* Adjust modal size for smaller screens *!
+        height: 70%;
+    }
+}
+*/
+
+.mapComponent {
+    color: #13357b;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+}
+
+.contentTop {
+    height: 18%;
+    display: flex;
+    align-items: start;
+    text-align: left;
+}
+
+.punctuationBox {
+    height: 82%;
+    position: relative;
+}
+.punctuationText {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+    pointer-events: none;
+}
+
+.point {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+.pointImage  {
+    width: 2vw;
+    height: auto;
+}
+.pointText {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    cursor: pointer;
+    //background: #ff5722;
+}
+.pointLine {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    //background: #ff5722;
+}
+
+
+/* 虚线样式 */
+.dashedLine {
+    border-left: 1px dashed #13357b;
+    background-color: transparent;
+}
+
+
+
+.modalContent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    //margin: 10% auto;
+    width: 60%; /* 基于组件宽度 */
+    height: auto; /* 基于组件高度 */
+    //background-color: #3173ea;
+    //padding: 20px;
+    //box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+    display: block;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.modalContentBox {
+    color: #003680;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+}
+.modalContentText {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.modalContentTextTop {
+    height: 50%;
+    display: flex;
+    justify-content: space-between;
+    padding: 5% ;
+    align-items: start;
+}
+.contentTopText {
+    text-align: justify;       /* 文本两端对齐 */
+    //text-align-last: justify;  /* 最后一行也两端对齐 */
+    text-align-last: left;  /* 最后一行也两端对齐 */
+    word-break: keep-all;      /* 保持单词不被打断 */
+    //white-space: nowrap;       /* 禁止自动换行 */
+}
+
+.modalContentTextTopText {
+    //padding: 2% 0;
+    //max-width: 60%;
+}
+
+.closeButton {
+    position: absolute !important;
+    top: 10px;
+    right: 10px;
+    //background-color: #ff5722;
+    width: 3rem;
+    height: 3rem;
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+    .point {
+        width: 2vw;
+        height: 2vw;
+    }
+
+    .pointLabel {
+        font-size: 3vw;
+    }
+
+    .modalContent {
+        width: 90%;
+        height: auto;
+    }
+}

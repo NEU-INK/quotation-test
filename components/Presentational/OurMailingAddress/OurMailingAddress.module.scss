@@ -1,0 +1,43 @@
+.ourMailingAddress {
+  //padding: 2% 3%;
+  padding: 5%;
+  background: #ffffff;
+  width: 100%;
+  display: flex;
+  height: auto;
+  flex-direction: column;
+
+}
+.left {
+  display: flex;
+  //flex-direction: column ;
+  justify-content: space-between; /* 将内容均匀分布，使最后一行在底部 */
+  padding: 10% 10% 0 0;
+  text-align: left;
+  font-family: 'HS';
+  //height: 65rem;
+}
+
+.content {
+  flex: 1; /* 占据可用空间，使最后一行向下推 */
+}
+
+.bottomText {
+  margin-top: auto; /* 确保最后一行在底部 */
+}
+
+.right{
+  //width: 103rem;
+  //background-color: #ff5722;
+  //height: 65rem;
+}
+.rightMapBox{
+  //background: #ff5722;
+  height: 34vw;
+}
+.rightMap {
+  border: 0;
+  width: 100%;
+  height: 100%;
+
+}

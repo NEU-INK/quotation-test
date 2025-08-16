@@ -1,0 +1,99 @@
+/* RulerSlider.module.scss */
+.rulerSlider {
+  padding: 32px;
+  text-align: center;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 800;
+  color: #2a2a2a;
+  margin-bottom: 20px;
+}
+
+.box {
+  width: 50%;
+  background-color: rgba(229, 94, 51, 0.55);
+  margin-bottom: 40px;
+  position: relative;
+  padding: 32px;
+}
+
+.text {
+  display: inline-block;
+  width: 50%;
+  background-color: white;
+  font-size: 29px;
+  font-weight: 800;
+  color: #5b74ff;
+  margin-bottom: 6px;
+}
+
+.outBox {
+  display: inline-block;
+  width: 50%;
+  //width: 300px;
+  background: rgba(37, 30, 241, 0.68);
+  //display: block;
+  height: 35px;
+  overflow-x: scroll;
+  position: relative;
+  //width: 100%;
+  scrollbar-width: none;
+}
+
+
+
+//.outBox::-webkit-scrollbar {
+//  //display: none;
+//}
+
+.liningBox {
+  width:200%; /* 增加刻度尺宽度 */
+  //width: 2000px; /* 增加刻度尺宽度 */
+  height: 35px;
+  background: url('../../../public/images/new-events/news-events-top-0.png')  repeat-x;
+}
+
+.vertical {
+  position: absolute;
+  width: 3px;
+  height: 40px;
+  background-color: #5b74ff;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+
+.boxSX {
+  background-color: rgba(229, 94, 51, 0.55);
+  margin-bottom: 40px;
+  position: relative;
+  padding: 32px;
+}
+
+.textSX {
+  background-color: white;
+  font-size: 29px;
+  font-weight: 800;
+  color: #5b74ff;
+  margin-bottom: 6px;
+}
+
+.outBoxSX {
+  //width: 300px;
+  background: rgba(37, 30, 241, 0.68);
+  display: block;
+  height: 35px;
+  overflow-x: scroll;
+  position: relative;
+  width: 100%;
+  scrollbar-width: none;
+}
+.liningBoxSX {
+  width:200%; /* 增加刻度尺宽度 */
+  //width: 2000px; /* 增加刻度尺宽度 */
+  height: 35px;
+  background: url('../../../public/images/new-events/news-events-top-0.png')  repeat-x;
+}

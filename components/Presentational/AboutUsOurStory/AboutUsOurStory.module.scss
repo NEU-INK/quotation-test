@@ -1,0 +1,215 @@
+
+
+.capacity {
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  position: relative;
+  z-index: 2;
+}
+
+.top {
+  width: 100%;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  padding: 0 0 5% 0;
+}
+
+.cardsContainer {
+  display: flex;
+  width: 100%;
+  height: 76rem;
+  //padding: 2rem;
+}
+
+.leftCard {
+  width: 90%;
+  background-color: var(--primary-blue); /* 蓝色背景 */
+  border-radius: 8px;
+  padding: 4rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: white;
+}
+
+.imageFrame {
+  width:45%;
+  position: relative;
+  aspect-ratio: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  //padding: 2%;
+  padding:3rem;
+  //background-color: #ff5722;
+}
+
+.imageFrame::before,
+.imageFrame::after,
+.imageFrame .leftBorder,
+.imageFrame .rightBorder {
+  content: '';
+  position: absolute;
+}
+
+.imageFrame::before {
+  /* 上边框 */
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 2px;
+  background: linear-gradient(to right, white 5%, transparent 5%, transparent 95%, white 95%);
+}
+
+.imageFrame::after {
+  /* 下边框 */
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background: linear-gradient(to right, white 5%, transparent 5%, transparent 95%, white 95%);
+}
+
+.leftBorder {
+  /* 左边框 */
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 2px;
+  background: linear-gradient(to top, white 5%, transparent 5%, transparent 95%, white 95%);
+}
+
+.rightBorder {
+  /* 右边框 */
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 2px;
+  background: linear-gradient(to top, white 5%, transparent 5%, transparent 95%, white 95%);
+}
+
+.textContent {
+  width: 54%;
+  height: 100%;
+
+  //background-color: #9880ff;
+  padding: 4rem 8rem 6rem 8rem;
+}
+
+.titleBox {
+  //background-color: #ff5722;
+  height: 20%;
+}
+.title {
+  //font-size: 3.6rem;
+  font-weight: bold;
+  //max-height: 20%;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  word-break: break-word;
+}
+.describeBox {
+  -ms-overflow-style: none; /* 隐藏滚动条 */
+  /* 对于 Firefox 浏览器 */
+  scrollbar-width: none; /* 隐藏滚动条 */
+  //margin: 1rem 0 0 0;
+  height: 80%;
+  max-height: calc(100% - 8rem);
+  //display: flex;
+  //flex-direction: column;
+  //justify-content: flex-end; /* 从底部排列内容 */
+  overflow-y: auto;
+  //text-align: start;        /* 文本两端对齐 */
+  //text-align: justify;        /* 文本两端对齐 */
+  //text-align-last: left;      /* 最后一行左对齐 */
+  word-break: keep-all;       /* 保持单词不被打断 */
+  //background-color: #ff5722;
+}
+
+.describeBoxBox {
+  min-height: 100%;
+  //height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* 从底部排列内容 */
+  flex-grow: 1;               /* 让 Box 根据内容多少动态调整高度 */
+  //display: flex;
+  //flex-direction: column;
+  //justify-content: flex-end;  /* 当内容少时，将文本靠底部 */
+  overflow-y: visible;           /* 允许滚动 */
+  //background-color: #7b3ce5;
+}
+.describeBoxBoxMobile {
+  height: 100%;
+  overflow: auto;
+  //background-color: #007df8;
+
+}
+
+.describeTextWrapper {
+  margin-top: auto;           /* 确保内容在下方 */
+}
+
+.describeText {
+  //margin-top: 4rem;           /* 段落间距 */
+  //font-size: 2.6rem;
+}
+
+
+
+.slick-slider {
+  max-height: 40vw; /* 限制右侧轮播图的高度 */
+}
+
+.slick-list {
+  overflow: hidden;
+}
+
+.slick-prev,
+.slick-next {
+  display: none !important;
+}
+.carousel {
+  margin-left: 2%;
+  width: 10%;
+  height: 100%;
+  /* 对于 IE 和 Edge 浏览器 */
+  overflow-y: auto; /* 实现竖向滚动 */
+  -ms-overflow-style: none; /* 隐藏滚动条 */
+  /* 对于 Firefox 浏览器 */
+  scrollbar-width: none; /* 隐藏滚动条 */
+}
+/* 针对 WebKit 浏览器 */
+.carousel::-webkit-scrollbar {
+  display: none; /* 隐藏滚动条 */
+}
+
+
+
+.imageList {
+  display: flex;
+  flex-direction: column; /* 竖向排列图片 */
+  gap: 1rem; /* 图片之间的间距 */
+}
+
+.carouselItem {
+  cursor: pointer;
+  border: 2px solid transparent;
+  padding: 5px;
+  transition: border-color 0.3s;
+}
+
+.carouselItem.selected {
+  border-color: #003685; /* 选中的图片边框颜色 */
+  border-radius: 5px;
+}
+
+

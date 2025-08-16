@@ -1,0 +1,12 @@
+.selected {
+  border: 1px solid #6eb7e5;
+  color: #6eb7e5;
+  padding: 6px;
+  border-radius: 0.3rem;
+}
+
+@media only screen and (max-width: 550px) {
+  .category {
+    height: 40px;
+  }
+}

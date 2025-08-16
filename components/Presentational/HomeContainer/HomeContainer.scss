@@ -1,0 +1,49 @@
+.home-container {
+  .home-main-heading-1 {
+    font-size: 16px;
+    font-family: 'lato';
+  }
+
+  .home-main-heading-2 {
+    font-size: 56px;
+    font-weight: 700;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    line-height: 67px;
+    font-family: 'lato';
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .home-container {
+    .home-main-heading-2 {
+      font-size: 32px;
+      line-height: 50px;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
+  }
+}
+.slick-prev:before, .slick-next:before {
+  color: white;
+}
+
+.slick-dots li button:before {
+  color: white;
+}
+.bot {
+  display: flex;
+  align-items: center;
+  img {
+    width: 24px;
+    margin-right: 10px;
+  }
+
+  span {
+    font-size: 16px;
+  }
+}
+.home-container-slick-dots {
+  bottom: 10% !important;
+}
+

@@ -1,0 +1,83 @@
+@media only screen and (max-width: 650px) {
+  .header-menu-container {
+    .menu-icon {
+      right: -6px;
+    }
+  }
+}
+.header-menu-container {
+  .desktop-menu {
+    display: flex;
+    align-items: center;
+
+    a {
+      margin-right: 1rem;
+      text-decoration: none;
+      color: #333;
+
+      &:hover {
+        color: #6eb7e5;
+      }
+    }
+  }
+  .menu-icon {
+    display: flex;
+    align-items: center;
+  }
+  .header-menu {
+    .MuiPaper-root {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+
+.gcse-search {
+  background: #ff5722;
+}
+//.gsc-control-cse {
+//  background-color: #ff5722 !important;
+//}
+.gcse-search {
+  background-color: rgba(255, 255, 255, 0);
+  border: 0;
+}
+.gsc-control-cse {
+  background-color: rgba(255, 255, 255, 0) !important;
+  border: none!important;
+}
+
+/* 自定义搜索框的样式 */
+.gsc-input {
+  border: 1px solid rgba(255, 255, 255, 0); /* 设置边框颜色 */
+  background-color: rgba(255, 255, 255, 0); /* 背景颜色 */
+  //color: rgba(255, 255, 255, 0); /* 文本颜色 */
+  padding: 8px; /* 内边距 */
+  //font-size: 16px; /* 字体大小 */
+  width: 100%; /* 让输入框宽度自适应 */
+}
+
+/* 自定义搜索按钮的样式 */
+.gsc-search-button {
+  background-color: rgba(255, 255, 255, 0); /* 设置按钮背景色 */
+  border: none; /* 去掉边框 */
+  color: #ffffff; /* 按钮文本颜色 */
+  //padding: 8px 16px; /* 内边距 */
+  //font-size: 16px; /* 按钮字体大小 */
+  cursor: pointer; /* 鼠标悬停样式 */
+}
+.gsc-search-button:hover {
+  background-color: rgba(255, 255, 255, 0);
+}
+
+//.gsc-search-button:hover {
+//  background-color: rgba(248, 248, 248, 0); /* 悬停时的背景颜色 */
+//}
+
+.gsc-search-button-v2 {
+  padding: 0 !important;
+  font-size: 1.6vw;
+  border: none !important;
+  background-color: rgba(255, 255, 255, 0)!important;
+
+}

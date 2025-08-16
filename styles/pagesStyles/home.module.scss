@@ -1,0 +1,12 @@
+.homePageContainer {
+  //background: #ff0000;
+  //margin-top: 30px;
+  position: relative;
+  overflow-x: hidden;
+
+
+}
+.homePageContainerCustomRemComponent {
+  --component-rem: 1px !important; /* 设置该组件内的 rem 值 */
+  //font-size: calc(var(--component-rem) * 1rem);
+}

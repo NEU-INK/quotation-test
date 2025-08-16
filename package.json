@@ -1,0 +1,71 @@
+{
+  "name": "nextjs-prixite",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "https://github.com/silentpiroro/silentpiroro.github.io",
+  "engines": {
+    "node": ">=16"
+  },
+  "scripts": {
+    "dev": "next dev -p 3070",
+    "build": "next build",
+    "deploy": "npm run build && npm run export && touch out/.nojekyll && git add . && git commit -m 'Deploy to GitHub Pages' && git push origin main",
+    "start": "next start  -p 3070",
+    "export": "next export",
+    "lint": "next lint && eslint && prettier --check .",
+    "fix": "prettier --write .",
+    "postbuild": "next-sitemap"
+  },
+  "pre-commit": [
+    "lint"
+  ],
+  "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.10.6",
+    "@mui/icons-material": "^5.14.19",
+    "@mui/material": "^5.14.12",
+    "@sendgrid/mail": "^7.7.0",
+    "axios": "^1.6.0",
+    "gh-pages": "^3.2.0",
+    "gray-matter": "^4.0.3",
+    "hls.js": "^1.5.17",
+    "i18next": "^23.11.5",
+    "leaflet": "^1.9.4",
+    "markdown-it": "^13.0.1",
+    "markdown-to-jsx": "^7.2.1",
+    "next": "^13.5.4",
+    "next-i18next": "^15.3.0",
+    "next-share": "^0.20.0",
+    "next-sitemap": "^4.2.3",
+    "nodemailer": "^6.9.14",
+    "postcss": "^8.4.39",
+    "prismjs": "^1.29.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-i18next": "^14.1.2",
+    "react-icons": "^4.12.0",
+    "react-leaflet": "^4.2.1",
+    "react-slick": "^0.29.0",
+    "react-toastify": "^9.1.3",
+    "sass": "^1.77.8",
+    "sharp": "^0.33.4",
+    "slick-carousel": "^1.8.1",
+    "styled-components": "^6.0.8",
+    "tailwindcss": "^3.4.4"
+  },
+  "devDependencies": {
+    "@types/leaflet": "^1.9.12",
+    "@types/markdown-it": "^12.2.3",
+    "@types/node": "^20.8.3",
+    "@types/prismjs": "^1.26.0",
+    "@types/react": "^18.2.12",
+    "@types/react-slick": "^0.23.10",
+    "@typescript-eslint/eslint-plugin": "^5.61.0",
+    "eslint": "8.43.0",
+    "eslint-config-next": "13.4.7",
+    "eslint-config-prettier": "^8.8.0",
+    "pre-commit": "^1.2.2",
+    "prettier": "^2.8.4",
+    "typescript": "^5.0.2"
+  }
+}

@@ -1,0 +1,34 @@
+.formWrapper {
+  position: relative;
+  width: 100%;
+  background: #F1F1F1;
+  //width: 40%;
+  padding: 1% 5%;
+  min-height: 400px; // 设置占位符的最小高度，确保布局稳定
+}
+
+.loadingPlaceholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 200px; // 或者根据实际情况调整高度
+  background-color: #f9f9f9;
+  color: #555;
+  font-size: 16px;
+  font-weight: bold;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.formContainer {
+  width: 100%;
+  padding: 0 15%;
+  background: #F1F1F1;
+}
+.formContainerMobile {
+  width: 100%;
+//padding: 5%;
+  background: #F1F1F1;
+}

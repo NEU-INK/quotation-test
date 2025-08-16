@@ -1,0 +1,93 @@
+
+
+
+@media only screen and (max-width: 800px) {
+  .aboutUsPage {
+    // Adjustments for smaller screens if needed
+  }
+}
+
+.ourPartnersPage {
+  color: white;
+  width: 100%;
+}
+.ourPartnersBox {
+  padding: 6% 0;
+  color: var(--primary-blue);
+}
+.partnerTitle {
+  text-align: center;
+  //font-size: 1.6vw;
+}
+.ourPartnersSlider {
+  padding: 0 2%; /* 左右内边距2% */
+}
+
+.partnerItem {
+  display: flex !important;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.imageFrame {
+  width: 55%; /* 左边占55%宽度 */
+  img {
+    width: 100%;
+    height: auto; /* 高度自动 */
+  }
+}
+
+.textContent {
+  width: 45%; /* 右边占45%宽度 */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* 上下元素间隔均匀 */
+  padding: 0 5%; /* 左侧留出一些内边距 */
+  max-height: 400px; /* 为了与图片一致，设置最大高度 */
+}
+
+.itemTitle {
+  //height: 20%; /* 占20%高度 */
+  //font-size: 1.8vw;
+  font-weight: bold;
+  white-space: nowrap; /* 防止换行 */
+  overflow: hidden;
+  text-overflow: ellipsis; /* 超出部分显示省略号 */
+}
+
+.itemLink {
+  height: 20%; /* 占20%高度 */
+  //font-size: 1.4vw;
+  font-weight: bold;
+  color: var(--link-color); /* 自定义链接颜色 */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.itemDescription {
+  height: 60%; /* 占60%高度 */
+  //font-size: 1.2vw;
+  line-height: 1.5em;
+  overflow-y: auto; /* 溢出时显示滚动条 */
+  padding: 10px 0;
+  display: flex;
+  align-items: center; /* 垂直居中 */
+  justify-content: start; /* 垂直居中 */
+  text-align: justify;
+}
+
+@media only screen and (max-width: 800px) {
+  .partnerItem {
+    flex-direction: column; /* 小屏幕下布局改为上下排列 */
+  }
+
+  .imageFrame, .textContent {
+    width: 100%; /* 小屏幕下，图片和文本各占满宽度 */
+  }
+
+  .textContent {
+    padding-left: 0;
+    margin-top: 20px;
+  }
+}

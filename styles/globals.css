@@ -1,0 +1,215 @@
+/* 引入字体 */
+@font-face {
+  font-family: 'HS';
+  /*src: url('./font/HarmonyOS_Sans_SC_Regular.ttf');*/
+  src: url('./font/MiSans-Regular.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'HC';
+  src: url('./font/MiSans-Regular.otf');
+  /*src: url('./font/HarmonyOS_Sans_Condensed_Regular.ttf');*/
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* 全局设置 */
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'HS';
+  word-break: keep-all;
+}
+
+:root {
+  --primary-blue: #13357b;
+  --primary-green: #63ac45;
+  --primary-grey: #d3d3d3;
+  --icon-grey-color: #939393;
+
+  /* 动态调整根字体大小，基于屏幕宽度 */
+  font-size: calc(10px + 1vw); /* 默认字体适配 */
+}
+
+/* 小屏设备适配 */
+@media (max-width: 768px) {
+  :root {
+    --base-font-size: 37.5%; /* 1rem = 6px */
+    font-size: calc(8px + 1vw); /* 缩小根字体大小 */
+  }
+}
+
+/* 超大屏设备适配 */
+@media (min-width: 1920px) {
+  :root {
+    font-size: calc(12px + 1vw); /* 放大根字体大小 */
+  }
+}
+
+/* Slick 样式调整 */
+.slick-prev:before,
+.slick-next:before {
+  content: '' !important;
+}
+
+/* 元素全局样式 */
+html {
+  font-size: var(--base-font-size);
+}
+
+body {
+  font-size: 1.6rem; /* 默认 16px */
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+h1,
+h2,
+h3,
+* {
+  font-family: 'HS';
+  box-sizing: border-box;
+}
+
+p {
+  margin: 15px 0;
+  line-height: 1.8;
+}
+
+/* 布局设置 */
+.container {
+  max-width: 768px;
+  margin: auto;
+  overflow: auto;
+  padding: 0 10px;
+}
+
+/* 组件样式 */
+header {
+  background: steelblue;
+  color: #fff;
+  padding: 5px;
+  margin-bottom: 40px;
+}
+
+header a {
+  color: #fff;
+}
+
+.posts {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: 30px !important;
+  margin-top: 30px !important;
+}
+
+@media (max-width: 500px) {
+  .posts {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+.card,
+.card-page {
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card-page {
+  padding: 15px 30px;
+}
+
+.post-title,
+.blog-title {
+  margin: 10px 0;
+  color: #000;
+}
+
+.post-date {
+  background: rgba(99, 172, 69, 0.1);
+  padding: 8px 10px;
+  margin: 10px 0 20px;
+  border-radius: 10px;
+}
+
+.service-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* 图像样式 */
+.post-img,
+.post-body .image {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.post-body .image-20 {
+  width: 20%;
+}
+.post-body .image-30 {
+  width: 30%;
+}
+.post-body .image-40 {
+  width: 40%;
+}
+.post-body .image-50 {
+  width: 50%;
+}
+.post-body .image-60 {
+  width: 60%;
+}
+.post-body .image-70 {
+  width: 70%;
+}
+.post-body .center-align {
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+}
+
+/* 按钮样式 */
+.read-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 48px;
+  width: 108px;
+  font-size: 1.3rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  border-radius: 4px;
+  color: #fff;
+  background-color: var(--primary-green);
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px rgba(0, 0, 0, 0.14),
+    0 1px 5px rgba(0, 0, 0, 0.12);
+}
+
+.read-button:hover {
+  background-color: rgb(69, 120, 48);
+  transition: background-color ease-in 0.2s;
+}
+
+/* 列表样式 */
+.post-body ul,
+ol {
+  font-size: 1.6rem;
+  line-height: 2.3;
+  margin: 10px 0;
+  padding-left: 20px;
+}
+
+/* 代码块样式 */
+.post-body pre {
+  background: #e5e5e5;
+  padding: 20px;
+  margin: 20px 0;
+  line-height: 2.3;
+}

@@ -1,0 +1,84 @@
+.contactForm {
+
+  padding: 2% 16%;
+  background: #f5f5f5;
+}
+.inputFieldContainer {
+  position: relative;
+
+}
+.inputFieldIcon {
+  position: absolute;
+  font-size: 28px;
+  top: 42px;
+  left: 40px;
+  opacity: 0.4;
+}
+.inputField {
+  width: 100%;
+  background: rgb(245, 245, 245);
+  font-size: 2.6rem;
+}
+
+
+.textArea {
+  background: #ffffff;
+  border: 1px solid #e7e7e7;
+  box-shadow: 10px 10px 24px 1px rgba(221, 221, 221, 0.15);
+  border-radius: 12px;
+  height: 284px;
+  outline: none;
+  width: 100%;
+  padding-left: 55px;
+  padding-top: 20px;
+  padding-right: 20px;
+  font-size: 18px;
+}
+.submitButton {
+  //float: center;
+  margin-top: 4vw;
+  justify-content: center;
+  display: flex;
+}
+.contactUsButton {
+  font-family: 'HS';
+  padding: 0 4rem ;
+  width: max-content;
+  font-size: 3.6rem;
+}
+
+@media only screen and (max-width: 550px) {
+  .contactUsButton {
+    height: 40px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .contactForm {
+    display: flex;
+    flex-direction: column;
+    padding: 2% 3%;
+    background: #f5f5f5;
+    .inputFieldContainer {
+      //.inputFieldIcon {
+      //  font-size: 25px;
+      //  left: 22px;
+      //}
+      //.inputField {
+      //  height: 60px;
+      //  padding-left: 45px;
+      //  font-size: 14px;
+      //
+      //}
+      //.inputField {
+      //  width: 100%;
+      //  background: rgb(245, 245, 245);
+      //}
+      //.textArea {
+      //  height: 200px;
+      //  font-size: 14px;
+      //  padding-left: 45px;
+      //}
+    }
+  }
+}

@@ -1,0 +1,222 @@
+.Box {
+  color: var(--primary-blue);
+  font-family: 'HS';
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  position: relative;
+  z-index: 2;
+}
+
+.BoxTitle {
+  width: 100%;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+
+.CategoryMenu {
+
+  width: 100%;
+  display: flex;
+  justify-content:start;
+  padding: 5% 0;
+  //background-color: #ff5722;
+}
+
+.SubcategoryMenu {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+
+.btn {
+  font-size: 2.6rem;
+  padding: 0.4vw 2vw;
+  font-weight: bold;
+  border-radius: 5%;
+  color: var(--primary-blue);
+}
+.btnZ {
+  font-size: 2.6rem;
+}
+.SelectedButton {
+
+  border: var(--primary-blue) solid 1px;
+}
+
+.SelectedSubcategory {
+  font-weight: bold;
+  color: darkblue;
+}
+
+.Breadcrumbs {
+  width: 100%;
+  justify-content:start;
+
+}
+
+.SortOptions {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+
+/* 产品网格布局 */
+.ProductGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 每行显示4个 */
+  //gap: 3.6rem; /* 卡片间距 */
+  row-gap: 4rem;// 行间距
+  column-gap: 3rem;// 列间距
+
+}
+/* 产品卡片样式 */
+.ProductCard {
+  background-color: #f9f9f9; /* 背景色 */
+  transition: transform 0.3s ease; /* 鼠标悬停动画 */
+  box-shadow: 3px 6px 6px rgba(0, 0, 0, 0.2); /* 阴影 */
+  overflow: hidden; /* 防止内容溢出 */
+  text-overflow: ellipsis; /* 超长内容显示省略号 */
+  white-space: nowrap; /* 不换行 */
+  //width: 100%; /* 确保宽度均分 */
+  //box-sizing: border-box; /* 包括内边距和边框 */
+}
+
+.ProductCard:hover {
+  transform: scale(1.03); /* 鼠标悬停时放大 */
+}
+
+
+
+.ProductImage {
+  position: relative;
+}
+
+.ProductImage img {
+  width: 100%;
+  height: auto;
+}
+.ProductInfo {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  //max-width: 360px;
+  width: 100%;
+  padding: 4% 2%;
+  color: var(--primary-blue);
+  background: #F7F7F7;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%; /* 保证卡片的高度统一 */
+  overflow: hidden; /* 防止内容溢出 */
+  margin-top: 10px;
+}
+
+.ProductTitle {
+  white-space: normal; /* 允许换行 */
+  word-wrap: break-word; /* 支持长单词换行 */
+  overflow-wrap: break-word; /* 支持所有类型文字换行 */
+  display: -webkit-box; /* 使用多行省略 */
+  -webkit-line-clamp: 2; /* 限制显示两行 */
+  -webkit-box-orient: vertical;
+  overflow: hidden; /* 超出部分隐藏 */
+  font-size: 2.9rem;
+  font-weight: bold;
+  //line-height: 1.4; /* 行高 */
+  height: calc(1.4em * 2); /* 两行的高度 */
+}
+
+
+
+@media (max-width: 768px) {
+  .ProductGrid {
+    grid-template-columns: repeat(auto-fill, minmax(40%, 1fr)); /* 移动端显示2个产品 */
+    //grid-template-columns: repeat(2, 1fr); /* 移动端显示2个产品 */
+  }
+}
+
+
+
+/* 订单按钮样式 */
+.OrderButton {
+  justify-content: end;
+  font-size: 2.2rem;
+  margin-top: 1vw;
+  color: #003680;
+  background-color: #fff;
+  border: 1px solid #003680;
+font-weight: bold;
+}
+
+.OrderButton:hover {
+  background-color: #003680;
+  color: #fff;
+}
+.ProductDescription {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 0 10px ;
+  background: linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+  text-align: left;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* 限制显示3行 */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  color: var(--primary-blue);
+}
+
+.ProductCard:hover .ProductDescription {
+  opacity: 1;
+}
+
+/* 面包屑导航 */
+.Breadcrumbs {
+  margin-bottom: 20px;
+}
+
+/* 一级菜单按钮 */
+.SelectedButton {
+  //background-color: lightblue;
+}
+
+.btn {
+  margin-right: 10px;
+}
+
+/* 二级菜单样式 */
+.SubcategoryMenu {
+  margin-top: 10px;
+}
+
+.SelectedSubcategory {
+  font-weight: bold;
+}
+
+/* 移动端菜单样式 */
+.CategoryMenuMobile {
+  display: flex;
+  flex-direction: column;
+}
+
+.SubcategoryMenuMobile {
+  display: none;
+}
+
+.SubcategoryMenuMobile.active {
+  display: block;
+}
+

@@ -1,0 +1,65 @@
+/*
+.title-container {
+  display: flex;
+  align-items: center;
+  .title-link {
+    display: flex;
+  }
+  .title-image {
+    margin-right: 5px;
+    cursor: pointer;
+  }
+  .title-heading {
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 800;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+}
+*/
+.title-container {
+  display: flex;
+  align-items: end; /* 使子元素的底部对齐 */
+  height: 100%; /* 确保容器有足够的高度 */
+  .title-link {
+    display: flex;
+    align-items: end; /* 使链接内的子元素也底部对齐 */
+  }
+  .title-image {
+    margin-right: 5px;
+    cursor: pointer;
+    height: auto; /* 确保图片高度自适应 */
+  }
+  .title-heading {
+    color: #ffffff;
+    font-size: 26px;
+    font-family: 'HC';
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+}
+.title-imageItem {
+  width: 20rem;
+  height: auto;
+}
+/* 移动端适配 */
+@media (max-width: 850px) {
+  .title-container {
+    .title-imageItem {
+      width:32rem;
+      height: auto;
+    }
+    .title-heading {
+      //color: #e00000;
+      font-size: 3vw;
+      font-family: 'HC';
+      font-weight: 600;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+  }
+
+}
+

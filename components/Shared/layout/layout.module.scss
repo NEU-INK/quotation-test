@@ -1,0 +1,34 @@
+//@media only screen and (max-width: 550px) {
+//  .responsiveness {
+//    width: 700px;
+//  }
+//}
+@media only screen and (max-width: 550px) {
+  .responsiveness {
+    width: 700px;
+  }
+}
+
+.header-bar {
+  transition: background-color 0.3s ease;
+}
+
+.transparent-bg {
+  background-color: transparent;
+}
+
+.blue-bg {
+  background-color: blue;
+}
+
+.headBg {
+  padding-top: 0; /* 确保内容不被吸顶导航栏遮挡 */
+  //padding-top: 7rem; /* 确保内容不被吸顶导航栏遮挡 */
+}
+
+@media (max-width: 800px) {
+  .headBg {
+    padding-top: 13vw; /* 确保内容不被吸顶导航栏遮挡 */
+  }
+}
+

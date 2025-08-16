@@ -1,0 +1,76 @@
+
+
+
+.newPage {
+  color: white;
+  width: 100%;
+  //background-color: var(--primary-blue);
+  background-color: #003680;
+  padding: 5%;
+  font-family: 'HS';
+
+}
+.header {
+//background-color: #ff5722;
+}
+.title {
+  //font-size: 2.6rem;
+  font-weight: bold;
+  line-height: 1;
+}
+
+
+.newsFooter {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  //margin-top: 2vw;
+  padding: 2vw 0;
+  //background-color: white;
+}
+
+.authorContainer {
+  display: flex;
+  align-items: center;
+}
+
+.authorCircle {
+  color: #007bff;
+  background-color: white;
+  width: 24px;
+  height: 24px;
+  //font-size: 16px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 8px;
+}
+
+.authorName {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin: 0 2rem 0 0;
+  //max-width: 100px;
+}
+
+.postDate {
+  text-align: right;
+  white-space: nowrap;
+}
+.postBody {
+  width: 100%;
+  overflow: auto;
+  //background-color: #ff5722;
+}
+.iframeBox {
+  width: 100%;
+  height: 100%;
+}
+
+//@media only screen and (max-width: 800px) {
+//  .aboutUsPage {
+//    // Adjustments for smaller screens if needed
+//  }
+//}

@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://walttec.shop
+
+# Sitemaps
+Sitemap: https://walttec.shop/sitemap.xml

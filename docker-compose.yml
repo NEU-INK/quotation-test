@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  nextjs-app:
+    build: .
+    ports:
+      - '3070:3070'
+    environment:
+      - SITE_URL=https://walttec.shop
+#    environment:
+#      - NODE_ENV=production
+    volumes:
+      - .:/app
+    command: npm start

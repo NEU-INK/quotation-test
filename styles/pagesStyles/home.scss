@@ -1,0 +1,44 @@
+//.home-page-container {
+//  //background: #ff0000;
+//  //margin-top: 30px;
+//  position: relative;
+//  overflow-x: hidden;
+//
+//
+//}
+
+
+
+@media only screen and (max-width: 600px) {
+  .home-page-container {
+    .services-grid {
+      display: none;
+    }
+
+    .services-carousel {
+      display: block;
+    }
+
+    .blogs-grid {
+      display: none;
+    }
+
+    .blogs-carousel {
+      display: block;
+    }
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .home-page-container {
+    .blogs-header-section {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .view-all-btn {
+      height: 50px;
+    }
+  }
+}
