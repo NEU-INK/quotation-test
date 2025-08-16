@@ -212,7 +212,7 @@ const HubSpotForm: React.FC<{
       script.onload = () => loadHubSpotForm()
       document.body.appendChild(script)
     }
-  }, [insertStyleSheet])
+  }, [insertStyleSheet, props.quotation])
 
   const setQuotationData = () => {
     const iframe = document.querySelector(
