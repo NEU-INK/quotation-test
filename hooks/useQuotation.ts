@@ -1,4 +1,10 @@
 export default function useQuotation() {
+  const titleTxt = {
+    txt1: 'ORDER',
+    txt2: 'PLACEMENT',
+    txt3: 'PROCESS',
+  }
+
   const Categories = ['Everyday', 'Formal', 'Performance', 'Medical Compression', 'Baby']
 
   const everydayList = [
@@ -1460,16 +1466,55 @@ export default function useQuotation() {
   const surchargeBetween500And999 = 1.2
   const surchargeOver1000 = 1.1
 
+  const categoryTip = 'Please select category first'
+  const materialTip = 'Please select material'
+  const silhouetteTip = 'Please select silhouette'
+  const sizeTip = 'Please select size'
+  const quantityTip = 'Please input quantity'
+
+  const setOpts = (data: any[], attr: string) => {
+    const opt: string[] = []
+    data.forEach((item) => {
+      const val = item[attr]
+      if (!opt.length || !opt.includes(val)) {
+        opt.push(val)
+      }
+    })
+    return opt
+  }
+
+  const formatNumber = (val: number) => {
+    const numberStr = Math.abs(val).toString()
+    if (numberStr.includes('.')) {
+      const parts = numberStr.split('.')
+      let integerPart = parts[0]
+      const decimalPart = parts[1] || ''
+      integerPart = integerPart.replace(/\B(?=(\d{3})+(?!\d))/g, ',')
+      return `${integerPart}.${decimalPart}`
+    }
+    return numberStr.replace(/\B(?=(\d{3})+(?!\d))/g, ',')
+  }
+
   return {
+    titleTxt,
+
     Categories,
     everydayList,
     formalList,
     performanceList,
     medicalCompressionList,
     babyList,
-
     surchargeLessThan500,
     surchargeBetween500And999,
     surchargeOver1000,
+
+    categoryTip,
+    materialTip,
+    silhouetteTip,
+    sizeTip,
+    quantityTip,
+
+    setOpts,
+    formatNumber,
   }
 }

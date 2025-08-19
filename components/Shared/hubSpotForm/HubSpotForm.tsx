@@ -186,7 +186,6 @@ const HubSpotForm: React.FC<{
   useEffect(() => {
     const loadHubSpotForm = () => {
       if (typeof window !== 'undefined' && (window as any)?.hbspt) {
-        console.dir((window as any).hbspt.forms.create)
         ;(window as any).hbspt.forms.create({
           portalId: '47318811',
           formId: !props.quotation
@@ -197,6 +196,9 @@ const HubSpotForm: React.FC<{
             insertStyleSheet()
             setLoading(false) // 表单加载完成，隐藏占位符
             setQuotationData()
+          },
+          onFormSubmit: () => {
+            sessionStorage.removeItem('quotation')
           },
         })
       }
@@ -220,41 +222,16 @@ const HubSpotForm: React.FC<{
     ) as HTMLIFrameElement | null
     const iframeDoc = iframe?.contentDocument
     if (iframeDoc) {
-      // const form = iframeDoc.querySelector('form')
-      // console.dir(form)
-      // ;(iframeDoc.querySelector('form') as any).reset()
-
-      // ;(iframeDoc.querySelector('input[name="firstname"]') as any).value = ''
-      // ;(iframeDoc.querySelector('input[name="lastname"]') as any).value = ''
-      // ;(iframeDoc.querySelector('input[name="email"]') as any).value = ''
-      // ;(iframeDoc.querySelector('input[name="phone"]') as any).value = ''
-      // ;(iframeDoc.querySelector('input[name="company"]') as any).value = ''
-      // ;(iframeDoc.querySelector('input[name="website"]') as any).value = ''
-      // ;(iframeDoc.querySelector('textarea') as any).value = ''
-      // ;(iframeDoc.querySelector('input[name="category"]') as any).value = ''
-      // ;(iframeDoc.querySelector('input[name="material"]') as any).value = ''
-      // ;(iframeDoc.querySelector('input[name="silhouette"]') as any).value = ''
-      // ;(iframeDoc.querySelector('input[name="size"]') as any).value = ''
-      // ;(iframeDoc.querySelector('input[name="quantity"]') as any).value = ''
-      // ;(iframeDoc.querySelector('input[name="total"]') as any).value = ''
-
       const quotation = sessionStorage.getItem('quotation')
       if (quotation !== null) {
         const { qcategory, qmaterial, qsilhouette, qsize, qquantity, qtotal } =
           JSON.parse(quotation)
-        ;(iframeDoc.querySelector('input[name="category"]') as any).readOnly = true
         ;(iframeDoc.querySelector('input[name="category"]') as any).value = qcategory
-        ;(iframeDoc.querySelector('input[name="material"]') as any).readOnly = true
         ;(iframeDoc.querySelector('input[name="material"]') as any).value = qmaterial
-        ;(iframeDoc.querySelector('input[name="silhouette"]') as any).readOnly = true
         ;(iframeDoc.querySelector('input[name="silhouette"]') as any).value = qsilhouette
-        ;(iframeDoc.querySelector('input[name="size"]') as any).readOnly = true
         ;(iframeDoc.querySelector('input[name="size"]') as any).value = qsize
-        ;(iframeDoc.querySelector('input[name="quantity"]') as any).readOnly = true
         ;(iframeDoc.querySelector('input[name="quantity"]') as any).value = qquantity
-        ;(iframeDoc.querySelector('input[name="total"]') as any).readOnly = true
         ;(iframeDoc.querySelector('input[name="total"]') as any).value = qtotal
-        sessionStorage.removeItem('quotation')
       }
     }
   }
