@@ -11,7 +11,13 @@ const Title = () => {
     <Box className="title-container">
       <Link href="/" className="title-link">
         <Box className="title-image">
-          <Image src={logoWaltTEC.src} alt={siteName} width={211.8} height={50.3}  className="title-imageItem"/>
+          <Image
+            src={logoWaltTEC.src}
+            alt={siteName}
+            width={211.8}
+            height={50.3}
+            className="title-imageItem"
+          />
         </Box>
         {/*<Typography className='title-heading' >*/}
         {/*  {siteName}*/}

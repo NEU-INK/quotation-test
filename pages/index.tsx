@@ -60,7 +60,6 @@ export default function Home() {
       <div className={`${styles.homePageContainer} `}>
         <HomeContainer />
         <AboutUs />
-
         <FeaturedProducts />
         <OurJourney />
         <MapComponent />

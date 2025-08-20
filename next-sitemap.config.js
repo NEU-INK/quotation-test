@@ -34,7 +34,7 @@ module.exports = {
       priority: 0.8, //
     },
     {
-      loc: '/product-quotation',
+      loc: '/quotation',
       changefreq: 'weekly',
     },
   ],

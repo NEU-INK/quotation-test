@@ -1,5 +1,5 @@
 .footerContainer {
-  background-color: #003680;
+  background-color: var(--base-blue);
   padding: 3% 5% 0 5%;
   color: #ffffff;
 }
@@ -61,7 +61,6 @@
   a {
     display: block;
     font-family: 'HS';
-
   }
   line-height: 2;
   font-family: 'HS';
@@ -84,7 +83,6 @@
 
 // 移动端适配
 @media only screen and (max-width: 750px) {
-
   .footerTitleImg {
     width: 42rem;
     height: auto;
@@ -102,17 +100,22 @@
     }
   }
   .contentTextBox {
-
     font-size: 3.2rem;
     //background:#ff5722 ;
   }
-
 }
 
 .footerContainer {
-
-  a:link {color: #8AB4D6;}       /* 未访问链接*/
-  a:visited {color: #8AB4D6;}   /* 已访问链接 */
-  a:hover {color: #ffffff;}  /* 鼠标移动到链接上 */
-  a:active {color: #ffffff;}  /* 鼠标点击时 */
+  a:link {
+    color: #8ab4d6;
+  } /* 未访问链接*/
+  a:visited {
+    color: #8ab4d6;
+  } /* 已访问链接 */
+  a:hover {
+    color: #ffffff;
+  } /* 鼠标移动到链接上 */
+  a:active {
+    color: #ffffff;
+  } /* 鼠标点击时 */
 }

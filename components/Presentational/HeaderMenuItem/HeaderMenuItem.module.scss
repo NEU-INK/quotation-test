@@ -1,13 +1,13 @@
 .submenuItems {
   width: 100%;
-  color: #003680;
+  color: var(--base-blue);
   text-align: center;
   padding: 10px 20px;
   cursor: pointer;
 }
 
 .submenuItems:hover {
-  background-color: #003680;
+  background-color: var(--base-blue);
   color: #fff;
 }
 

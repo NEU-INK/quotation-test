@@ -71,9 +71,8 @@ const HeaderMenuItem: React.FC<HeaderMenuItemProps> = ({
             flexDirection: 'column',
             position: 'absolute',
             top: '100%',
-
             backgroundColor: 'rgba(255,255,255,0.51)',
-            border: '1px solid #003680',
+            border: '1px solid var(--base-blue)',
             zIndex: 1000,
             minWidth: '220px',
             alignItems: 'center',

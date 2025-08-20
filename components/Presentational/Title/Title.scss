@@ -41,14 +41,14 @@
   }
 }
 .title-imageItem {
-  width: 20rem;
+  width: 30rem;
   height: auto;
 }
 /* 移动端适配 */
 @media (max-width: 850px) {
   .title-container {
     .title-imageItem {
-      width:32rem;
+      width: 32rem;
       height: auto;
     }
     .title-heading {
@@ -60,6 +60,4 @@
       cursor: pointer;
     }
   }
-
 }
-

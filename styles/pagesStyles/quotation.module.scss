@@ -1,0 +1,120 @@
+.productQuotation {
+  width: 100%;
+  padding: 5%;
+  background-color: #f7f7f7;
+}
+
+.stepContainer {
+  margin-bottom: 18px;
+}
+
+.stepTitle {
+  font-family: 'HS';
+  font-weight: bold;
+  color: #003680;
+}
+
+.stepTip {
+  margin-top: 10px;
+  font-family: 'HS';
+  color: #003680;
+}
+
+.optionContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.optionItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40rem;
+  margin-top: 10px;
+  margin-right: 28px;
+  &:last-of-type {
+    margin-right: 0;
+  }
+  border: 1px solid #003680;
+  padding: 10px 16px;
+  border-radius: 12px;
+  font-size: 2.9rem;
+  // color: #003680;
+  color: #000;
+  text-align: center;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.optionItemSelected {
+  border: none;
+  color: #003680;
+  background-color: #8cb6d8;
+}
+
+.optionItemMaterial {
+  border: none;
+}
+
+.optionItemMaterialSelected {
+  border: 2px solid #003680;
+  color: #003680;
+}
+
+.quantityContainer {
+  position: relative;
+}
+
+.quantityContainerDisabled {
+  padding: 14px;
+  cursor: not-allowed !important;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    width: calc(100% - 28px);
+    height: calc(100% - 28px);
+    border-radius: 12px;
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+}
+
+.quantityInput {
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-bottom: 1px solid #003680;
+  padding: 10px 14px;
+  // border-color: #003680 !important;
+  font-size: 3rem;
+  color: #003680;
+  background-color: transparent;
+  outline: none;
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+
+.optionBtns {
+  text-align: center;
+}
+
+.dialogContent {
+  padding: 16px 24px;
+}
+
+.quotationItem {
+  display: flex;
+  padding-bottom: 4px;
+  border-bottom: 1px solid #003680;
+}
+
+.dialogFooter {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 24px;
+}

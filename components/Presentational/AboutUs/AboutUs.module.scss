@@ -1,4 +1,3 @@
-
 .aboutUs {
   color: #fff;
   width: 100%;
@@ -18,8 +17,8 @@
   //align-items: start;
 }
 .contentMobileBox {
-  background-color: #003680;
   height: max-content;
+  background-color: var(--base-blue);
 }
 .contentMobile {
   padding: 0 2rem;
@@ -48,18 +47,17 @@
 .contentTopText {
   padding: 2% 0;
   max-width: 50%;
-  text-align: justify;       /* 文本两端对齐 */
+  text-align: justify; /* 文本两端对齐 */
   //text-align-last: justify;  /* 最后一行也两端对齐 */
-  text-align-last: left;  /* 最后一行也两端对齐 */
-  word-break: keep-all;      /* 保持单词不被打断 */
+  text-align-last: left; /* 最后一行也两端对齐 */
+  word-break: keep-all; /* 保持单词不被打断 */
   //white-space: nowrap;       /* 禁止自动换行 */
 }
 .sustainabilityRightText {
-
-  text-align: justify;       /* 文本两端对齐 */
+  text-align: justify; /* 文本两端对齐 */
   //text-align-last: justify;  /* 最后一行也两端对齐 */
-  text-align-last: left;  /* 最后一行也两端对齐 */
-  word-break: keep-all;      /* 保持单词不被打断 */
+  text-align-last: left; /* 最后一行也两端对齐 */
+  word-break: keep-all; /* 保持单词不被打断 */
   //white-space: nowrap;       /* 禁止自动换行 */
 }
 
@@ -70,7 +68,7 @@
   justify-content: space-around;
   align-items: center;
   font-weight: 600;
-  font-family: "HS";
+  font-family: 'HS';
   text-align: center;
 }
 .contentNumberMobile {
@@ -80,7 +78,7 @@
   justify-content: space-around;
   align-items: center;
   font-weight: 600;
-  font-family: "HS";
+  font-family: 'HS';
   text-align: center;
 }
 .sustainability {
@@ -99,11 +97,10 @@
 }
 .sustainabilityLeft {
   //borderRadius: '50%',
-
   display: block;
   width: 50%;
   max-width: 50%;
-  height: 100%;
+  // height: 100%;
   padding: 3% 5%;
 }
 .sustainabilityLeftMobile {
@@ -123,20 +120,21 @@
 }
 
 .sustainabilityRight {
+  flex: 0 0 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   padding: 0 0 0 5%;
   height: 60%;
-  flex: 0 0 50%;
-  text-align: left;
   font-family: 'HS';
+  text-align: left;
 }
 
 .sustainabilityRightMobile {
-  padding: 4rem 0 ;
+  padding: 4rem 0;
   text-align: center;
   font-family: 'HS';
 }
-
-
 
 .bottom {
   flex: 1;
@@ -193,12 +191,18 @@
 
   /* 使用视窗宽度单位调整字体大小 */
   .responsiveText {
-    h1, h2, h3, h4, h5, h6, p, span {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    span {
       font-size: 4vw; /* 根据屏幕宽度自动调整字体大小 */
     }
   }
 }
-
 
 /* 定义局部样式，确保只影响当前组件 */
 .customSlider :global(.slick-dots) {
@@ -207,11 +211,10 @@
 
 .customSlider :global(.slick-dots li button:before) {
   font-size: 1.2rem !important; /* 调整点的大小 */
-  color:#1F6599 !important; /* 非当前页的点颜色 */
+  // color: #1f6599 !important; /* 非当前页的点颜色 */
 }
 
 .customSlider :global(.slick-dots li.slick-active button:before) {
-  color: #FFFFFF !important; /* 当前页的深蓝色 */
+  color: #ffffff !important; /* 当前页的深蓝色 */
   font-size: 1.2rem !important; /* 当前页的点更大 */
 }
-

@@ -30,7 +30,7 @@ const nextConfig = {
       '/sustainability': { page: '/sustainability' },
       '/contact-us': { page: '/contact-us' },
       '/contact-us-quotation': { page: '/contact-us-quotation' },
-      '/product-quotation': { page: '/product-quotation' },
+      '/quotation': { page: '/quotation' },
 
       // 如果有其他页面，请在这里添加
       // '/about': { page: '/about' },

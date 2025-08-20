@@ -94,7 +94,7 @@ export const pages = [
     text: 'CONTACT US',
   },
   {
-    path: '/product-quotation',
+    path: '/quotation',
     text: 'QUOTATION',
   },
 ]

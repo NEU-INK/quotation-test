@@ -1,6 +1,3 @@
-
-
-
 @media only screen and (max-width: 800px) {
   .aboutUsPage {
     // Adjustments for smaller screens if needed
@@ -82,7 +79,8 @@
     flex-direction: column; /* 小屏幕下布局改为上下排列 */
   }
 
-  .imageFrame, .textContent {
+  .imageFrame,
+  .textContent {
     width: 100%; /* 小屏幕下，图片和文本各占满宽度 */
   }
 

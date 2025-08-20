@@ -1,5 +1,3 @@
-
-
 .capacity {
   padding: 5%;
   display: flex;
@@ -29,24 +27,24 @@
 
 .leftCard {
   width: 90%;
-  background-color: var(--primary-blue); /* 蓝色背景 */
   border-radius: 8px;
   padding: 4rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   color: white;
+  background-color: var(--base-blue);
 }
 
 .imageFrame {
-  width:45%;
+  width: 45%;
   position: relative;
   aspect-ratio: 1;
   display: flex;
   justify-content: center;
   align-items: center;
   //padding: 2%;
-  padding:3rem;
+  padding: 3rem;
   //background-color: #ff5722;
 }
 
@@ -97,7 +95,6 @@
 .textContent {
   width: 54%;
   height: 100%;
-
   //background-color: #9880ff;
   padding: 4rem 8rem 6rem 8rem;
 }
@@ -130,7 +127,7 @@
   //text-align: start;        /* 文本两端对齐 */
   //text-align: justify;        /* 文本两端对齐 */
   //text-align-last: left;      /* 最后一行左对齐 */
-  word-break: keep-all;       /* 保持单词不被打断 */
+  word-break: keep-all; /* 保持单词不被打断 */
   //background-color: #ff5722;
 }
 
@@ -140,30 +137,27 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end; /* 从底部排列内容 */
-  flex-grow: 1;               /* 让 Box 根据内容多少动态调整高度 */
+  flex-grow: 1; /* 让 Box 根据内容多少动态调整高度 */
   //display: flex;
   //flex-direction: column;
   //justify-content: flex-end;  /* 当内容少时，将文本靠底部 */
-  overflow-y: visible;           /* 允许滚动 */
+  overflow-y: visible; /* 允许滚动 */
   //background-color: #7b3ce5;
 }
 .describeBoxBoxMobile {
   height: 100%;
   overflow: auto;
   //background-color: #007df8;
-
 }
 
 .describeTextWrapper {
-  margin-top: auto;           /* 确保内容在下方 */
+  margin-top: auto; /* 确保内容在下方 */
 }
 
 .describeText {
   //margin-top: 4rem;           /* 段落间距 */
   //font-size: 2.6rem;
 }
-
-
 
 .slick-slider {
   max-height: 40vw; /* 限制右侧轮播图的高度 */
@@ -192,8 +186,6 @@
   display: none; /* 隐藏滚动条 */
 }
 
-
-
 .imageList {
   display: flex;
   flex-direction: column; /* 竖向排列图片 */
@@ -211,5 +203,3 @@
   border-color: #003685; /* 选中的图片边框颜色 */
   border-radius: 5px;
 }
-
-
