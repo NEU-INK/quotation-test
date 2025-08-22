@@ -4,6 +4,7 @@ import { ArrowUpward, ArrowDownward } from '@mui/icons-material'
 import styles from './ProductsList.module.scss'
 import { useDevice } from '../../../utils/deviceContext'
 // import Image from "next/image";
+
 const isNav = false
 const isSX = false
 // 示例产品数据
@@ -348,6 +349,9 @@ const categories = [
   // { category: 'All', subcategories: [] },
   { category: 'WHOLESALE', subcategories: [] },
   { category: 'CLOSEOUT', subcategories: [] },
+  { category: 'SPORTS SOCKS', subcategories: [] },
+  { category: 'EVERYDAY SOCKS', subcategories: [] },
+  { category: 'MEDICAL SOCKS', subcategories: [] },
   // { category: 'Socks', subcategories: ['No Show Socks'] },
   // { category: 'Cycling Jersey', subcategories: ['Men\'s Cycling Jersey'] },
   // { category: 'Vest', subcategories: ['Women\'s Lightweight Vest'] },
@@ -388,9 +392,7 @@ const ProductsList: React.FC = () => {
   //     setShowSubcategories(false); // 隐藏子类别
   // };
 
-  const handleMouseLeave = () => {
-    setShowSubcategories(false) // 鼠标离开时隐藏子类别
-  }
+  const handleMouseLeave = () => setShowSubcategories(false) // 鼠标离开时隐藏子类别
 
   // 面包屑导航
   const BreadcrumbsNav = () => (
@@ -464,6 +466,7 @@ const ProductsList: React.FC = () => {
           fontSize={`${isMobile ? '4rem' : '9.6rem'}`}
           fontWeight={800}
           fontFamily={'HC'}
+          color={'var(--base-blue)'}
         >
           PRODUCTS
         </Typography>
@@ -486,8 +489,10 @@ const ProductsList: React.FC = () => {
                 }`,
                 fontWeight: 800,
                 padding: '0.4rem 4rem',
-                background: `${selectedCategory === category.category ? '#003680' : '#ffffff'}`,
-                color: `${selectedCategory === category.category ? '#fff' : '#13357b'}`,
+                background: `${
+                  selectedCategory === category.category ? 'var(--base-blue)' : '#ffffff'
+                }`,
+                color: `${selectedCategory === category.category ? '#fff' : 'var(--base-blue)'}`,
               }}
             >
               {category.category}
@@ -506,7 +511,7 @@ const ProductsList: React.FC = () => {
                       sx={{
                         fontSize: '2.6rem',
                         fontWeight: 400,
-                        color: '#13357b',
+                        color: 'var(--base-blue)',
                         borderRadius: '5%',
                         padding: '0.4rem 4rem',
                       }}

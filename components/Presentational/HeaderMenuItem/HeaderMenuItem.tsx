@@ -45,10 +45,10 @@ const HeaderMenuItem: React.FC<HeaderMenuItemProps> = ({
           height: 70,
           display: 'flex',
           margin: isMobile ? '0 10px' : '0 20px',
-          minWidth: isMobile ? '100px' : '150px',
+          minWidth: isMobile ? '100px' : 'auto',
           justifyContent: isMobile ? 'flex-start' : 'center',
           '&:hover': {
-            color: '#8cb6d8',
+            color: 'var(--hover-blue)',
           },
         }}
       >
@@ -66,18 +66,21 @@ const HeaderMenuItem: React.FC<HeaderMenuItemProps> = ({
       {!isMobile && showSubMenu && submenuItems.length > 0 && (
         <div
           style={{
-            fontFamily: 'HS',
-            display: 'flex',
-            flexDirection: 'column',
             position: 'absolute',
             top: '100%',
-            backgroundColor: 'rgba(255,255,255,0.51)',
-            border: '1px solid var(--base-blue)',
+            left: '50%',
+            transform: 'translateX(-50%)',
             zIndex: 1000,
-            minWidth: '220px',
+            display: 'flex',
+            flexDirection: 'column',
             alignItems: 'center',
+            minWidth: '220px',
+            border: '1px solid rgba(255,255,255,0.9)',
             borderRadius: '5px',
+            fontFamily: 'HS',
             fontSize: '2.2rem',
+            backgroundColor: 'rgba(255,255,255,0.9)',
+            overflow: 'hidden',
           }}
         >
           {submenuItems.map((submenuItem, index) => (

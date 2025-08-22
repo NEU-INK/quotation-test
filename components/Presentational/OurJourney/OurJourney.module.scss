@@ -1,380 +1,5 @@
-/*
-!*
-!* 根容器样式 *!
 .aboutUs {
-  color: #13357b;
-  width: 100%;
-  height: auto;
-  overflow: hidden;
-  position: relative;
-}
-
-!* 内容容器样式 *!
-.content {
-  position: relative;
-  padding: 40px;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-!* 顶部内容样式 *!
-.contentTop {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-!* 顶部标题样式 *!
-.contentTopTitle {
-  font-size: 36px;
-  font-weight: bold;
-  color: #1E3A8A;
-  margin: 0;
-}
-
-!* 年份容器样式 *!
-.timeLine {
-  position: relative;
-}
-
-!* 年份条样式 *!
-.years {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 40px;
-  margin-bottom: 10px;
-}
-
-!* 年份文字样式 *!
-.year,
-.currentYear {
-  font-size: 20px;
-}
-
-.currentYear {
-  font-size: 28px;
-  font-weight: bold;
-  border: 2px solid #1E3A8A;
-  padding: 8px 16px;
-  border-radius: 8px;
-}
-
-.inactiveYear {
-  color: #CCCCCC;
-}
-
-!* 标尺容器样式 *!
-.rulerContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-  overflow-x: auto;
-  width: 80%;
-  height: 50px; !* 与 canvas 高度一致 *!
-  margin: 0 auto;
-  background-color: #f0f0f0;
-  cursor: grab;
-  white-space: nowrap; !* 确保水平滚动 *!
-}
-
-!* 隐藏滚动条 *!
-.rulerContainer::-webkit-scrollbar {
-  display: none;
-}
-
-!* 标尺游标样式 *!
-.rule_cursorTop,
-.rule_cursorBottom {
-  position: absolute;
-  width: 1%;
-  height: 50px; !* 与 canvas 高度一致 *!
-  background-color: blue;
-}
-
-.rule_cursorTop {
-  bottom: 0; !* 紧贴下边界 *!
-  left: 49.5%;
-  transform: translateX(-50%);
-}
-
-.rule_cursorBottom {
-  top: 0;
-  left: 49.5%;
-  transform: translateX(-50%);
-}
-
-!* 垂直线样式 *!
-.verticalLine {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  width: 2px;
-  background-color: #1E3A8A;
-}
-
-!* 箭头样式 *!
-.arrows {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: -20px;
-}
-
-.arrowDown,
-.arrowUp {
-  width: 0;
-  height: 0;
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-  position: absolute;
-  transform: translateX(-50%);
-}
-
-.arrowDown {
-  border-top: 10px solid #1E3A8A;
-}
-
-.arrowUp {
-  border-bottom: 10px solid #1E3A8A;
-}
-
-!* 图像和文本容器样式 *!
-.imageAndText {
-  margin-top: 20px;
-  text-align: center;
-}
-
-!* 描述文字样式 *!
-.description {
-  margin-top: 10px;
-  font-size: 16px;
-  color: #333333;
-}
-*!
-!* 根容器样式 *!
-.aboutUs {
-  color: #13357b;
-  width: 100%;
-  height: auto;
-  overflow: hidden;
-  position: relative;
-}
-
-!* 内容容器样式 *!
-.content {
-  padding: 40px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  padding: 5%;
-}
-
-!* 顶部内容样式 *!
-.contentTop {
-  height: 20%;
-  display: flex;
-  align-items: start;
-  text-align: left;
-}
-
-!* 顶部标题样式 *!
-.contentTopTitle {
-  font-size: 36px;
-  font-weight: bold;
-  color: #1E3A8A;
-  margin: 0;
-}
-
-!* 年份容器样式 *!
-.timeLine {
-
-  height: 80%;
-//background: #00d1a4;
-  position: relative;
-}
-.years {
-  //background: #e71a1a;
-  display: flex;
-  justify-content: center; !* 水平居中对齐 *!
-  width: 100%;
-  padding: 10px 0; !* 上下内边距，调整间距 *!
-}
-
-.yearBox {
-  //background: #60d317;
-  max-width: 300px; !* 最大宽度为 400px *!
-  display: flex;
-  justify-content: space-between; !* 空间均匀分布 *!
-  align-items: center;
-  width: 100%; !* 确保 .yearBox 占满宽度 *!
-  box-sizing: border-box; !* 包括 padding 和 border 在内 *!
-}
-
-!* 年份文字样式 *!
-//.year,
-//.currentYear {
-//  font-size: 20px;
-//  margin: 0 10px; !* 左右外边距，调整间距 *!
-//}
-
-.currentYear {
-  //font-size: 28px;
-  //font-weight: bold;
-  border: 1px solid #1E3A8A;
-  padding: 2px 20px;
-  border-radius: 8px;
-}
-
-//.inactiveYear {
-//  color: #CCCCCC;
-//}
-
-.ruleBox {
-  height: 60px;
-  width: 100%;
-  display: flex;
-  //background: #ff0000;
-  position: relative; !* 使绝对定位的元素相对于 .ruleBox 进行定位 *!
-  align-items: center;
-  justify-content: center; !* 水平居中对齐 *!
-}
-
-.rule_cursorTop,
-.rule_cursorBottom {
-  position: absolute;
-  width: 0;
-  height: 0;
-  border-style: solid;
-}
-
-.rule_cursorTop {
-  top: 0; !* 顶部对齐 *!
-  left: 50%; !* 横向居中 *!
-  transform: translateX(-50%);
-  border-width:  10px 10px 0 10px; !* 箭头的边框宽度 *!
-  border-color: #1E3A8A transparent transparent transparent; !* 箭头颜色 *!
-}
-
-.rule_cursorBottom {
-  top: 60px; !* 底部对齐 *!
-  left: 50%; !* 横向居中 *!
-  transform: translateX(-50%);
-  border-width: 0  10px 10px 10px; !* 箭头的边框宽度 *!
-  border-color:  transparent transparent #1E3A8A transparent; !* 箭头颜色 *!
-}
-
-.rulerContainer {
-  position: relative;
-  width: 100%; !* 确保 rullerContainer 能够伸展到 .ruleBox 的宽度 *!
-  overflow: hidden; !* 避免滚动条显示 *!
-}
-
-//
-//.rulerContainer {
-//  position: relative;
-//}
-
-
-
-
-!* 标尺容器样式 *!
-.rulerContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-  overflow-x: scroll;
-  width: 90%;
-  height: 40px; !* 与 canvas 高度一致 *!
-  margin: 0 auto;
-  //background-color: #f0f0f0;
-  cursor: grab;
-  white-space: nowrap; !* 确保水平滚动 *!
-}
-
-!* 隐藏滚动条 *!
-.rulerContainer::-webkit-scrollbar {
-  display: none;
-}
-
-
-
-!* 垂直线样式 *!
-.verticalLine {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  width: 2px;
-  background-color: #1E3A8A;
-}
-
-!* 箭头样式 *!
-.arrows {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: -20px;
-}
-
-.arrowDown,
-.arrowUp {
-  width: 0;
-  height: 0;
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-  position: absolute;
-  transform: translateX(-50%);
-}
-
-.arrowDown {
-  border-top: 10px solid #1E3A8A;
-}
-
-.arrowUp {
-  border-bottom: 10px solid #1E3A8A;
-}
-
-!* 图像和文本容器样式 *!
-.imageAndText {
-  display: flex;
-  justify-content: center; !* 水平居中对齐 *!
-  width: 100%;
-  padding: 15px 0; !* 上下内边距，调整间距 *!
-  //align-items: center;
-  //margin-top: 20px;
-  //text-align: center;
-}
-.imageAndTextBox {
-  width: 400px;
-  max-width: 80%;
-  background: #ffffff;
-  display: flex;
-flex-direction: column;
-  margin: 20px auto;
-  padding: 10px ;
-  align-items: center;
-}
-
-!* 描述文字样式 *!
-.description {
-  margin-top: 10px;
-  font-size: 16px;
-  color: #333333;
-}
-*/
-
-
-
-.aboutUs {
-  color: #13357b;
+  color: var(--base-blue);
   width: 100%;
   height: auto;
   overflow: hidden;
@@ -388,10 +13,9 @@ flex-direction: column;
   left: 0;
   width: 100%;
   height: 100%;
-  display: flex;
-  flex-direction: column;
-
   padding: 5%;
+  // display: flex;
+  // flex-direction: column;
 }
 
 /* 顶部内容样式 */
@@ -406,13 +30,12 @@ flex-direction: column;
 .contentTopTitle {
   font-size: 2.2vw;
   font-weight: bold;
-  color: #1E3A8A;
+  color: var(--base-blue);
   margin: 0;
 }
 
 /* 年份容器样式 */
-.timeLine {
-
+.timeLineContainer {
   height: 80%;
   //background: #00d1a4;
   position: relative;
@@ -438,11 +61,10 @@ flex-direction: column;
 .currentYear {
   //font-size: 28px;
   //font-weight: bold;
-  border: 1px solid #1E3A8A;
+  border: 1px solid var(--base-blue);
   padding: 0.2vw 1.2vw;
   border-radius: 0.6vw;
 }
-
 
 .ruleBox {
   height: 60px;
@@ -468,7 +90,7 @@ flex-direction: column;
   left: 50%; /* 横向居中 */
   transform: translateX(-50%);
   border-width: 1vw 1vw 0 1vw; /* 使用 vw 单位调整箭头的边框宽度 */
-  border-color: #1E3A8A transparent transparent transparent; /* 箭头颜色 */
+  border-color: #1e3a8a transparent transparent transparent; /* 箭头颜色 */
 }
 
 .rule_cursorBottom {
@@ -477,7 +99,7 @@ flex-direction: column;
   left: 50%; /* 横向居中 */
   transform: translateX(-50%);
   border-width: 0 1vw 1vw 1vw; /* 使用 vw 单位调整箭头的边框宽度 */
-  border-color:  transparent transparent #1E3A8A transparent; /* 箭头颜色 */
+  border-color: transparent transparent #1e3a8a transparent; /* 箭头颜色 */
 }
 /* 标尺容器样式 */
 .rulerContainer {
@@ -509,7 +131,7 @@ flex-direction: column;
 /* 图像和文本容器样式 */
 .imageAndText {
   height: calc(100% - 10vw);
-  margin:2rem 0 0 0 ;
+  margin: 4rem 0 0 0;
   //background-color: #ff5722;
   display: flex;
   justify-content: center; /* 水平居中对齐 */
@@ -525,7 +147,7 @@ flex-direction: column;
   display: flex;
   flex-direction: column;
   //margin: 1.2vw auto;
-  padding: 1rem ;
+  padding: 1rem;
   align-items: center;
 }
 
@@ -536,17 +158,112 @@ flex-direction: column;
   color: #333333;
 }
 
+.timeline {
+  width: 100%;
+  height: 80%;
+}
+
+.timeline_lineContainer {
+  width: 100%;
+  height: 11rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.timeline_line {
+  display: flex;
+  height: 100%;
+  cursor: grab;
+}
+
+.singleTimeNode {
+  display: flex;
+  align-items: center;
+  height: 6rem;
+}
+
+.timeNodeContainer {
+  flex-shrink: 0;
+  height: 100%;
+}
+
+.timeNode {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background-color: var(--base-blue);
+  cursor: pointer;
+}
+
+.timeNodeSelected {
+  .timeNode {
+    border: 2px solid #fff;
+    transform: scale(1.5);
+  }
+}
+
+.timeNode_lineSegment {
+  flex-shrink: 0;
+  width: 5rem;
+  height: 1px;
+  background-color: var(--base-blue);
+}
+
+.timeNodeContent {
+  display: flex;
+  width: 50%;
+  height: 60%;
+  margin: 5rem auto 0;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.35);
+  overflow: hidden;
+}
+
+.timeNodeContentImg {
+  width: 50%;
+  height: 100%;
+}
+
+.timeNodeContentDetail {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  padding: 3rem 4rem;
+}
+
 /* 适配移动端 */
 @media (max-width: 768px) {
   .canvas {
     position: absolute;
     top: 0;
     left: 0;
-    transform:scale(0.6);
+    transform: scale(0.6);
   }
   .rule_cursorBottom {
     top: calc(100% + 1vw);
+  }
+
+  .timeNode {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .timeNodeSelected {
+    .timeNode {
+      border-width: 1.5px;
+      transform: scale(1.5);
     }
+  }
+
+  .timeNode_lineSegment {
+    width: 4rem;
+  }
+
+  .timeNodeContent {
+    margin-top: 2rem;
+  }
   //.contentTopText {
   //  max-width: 100%;
   //}

@@ -218,7 +218,6 @@ export const sustainabilityData = {
   features: [
     {
       img: '/images/walt/ai/imgAI6.png',
-
       title: 'Coordinated robotic forklift',
       description:
         'Our products are made from sustainable and eco-friendly materials to reduce environmental impact.',
@@ -227,7 +226,6 @@ export const sustainabilityData = {
     },
     {
       img: '/images/walt/ai/imgAI3.png',
-
       title: 'Automatic transport system',
       description:
         'We use energy-efficient manufacturing processes to minimize our carbon footprint.',
@@ -261,7 +259,6 @@ export const sustainabilityData = {
     },
     {
       img: '/images/walt/ai/imgAI12.png',
-
       title:
         'On-site filtration system results to 80% of recycled water used within the facility that is also environmentally responsible',
       description:
@@ -271,7 +268,6 @@ export const sustainabilityData = {
     },
     {
       img: '/images/walt/ai/imgAI18.png',
-
       title:
         'By utilizing river water in our facility, we not only save on cost, but more importantly it is sustainable and environmentally sound',
       description:
@@ -281,7 +277,6 @@ export const sustainabilityData = {
     },
     {
       img: '/images/walt/ai/imgAI9.png',
-
       title: 'Waste Reduction',
       description:
         'Auto controls the amount to be used in production by computerized weight calculation.',

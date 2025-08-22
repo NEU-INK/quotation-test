@@ -200,6 +200,6 @@
 }
 
 .carouselItem.selected {
-  border-color: #003685; /* 选中的图片边框颜色 */
+  border-color: var(--base-blue); /* 选中的图片边框颜色 */
   border-radius: 5px;
 }

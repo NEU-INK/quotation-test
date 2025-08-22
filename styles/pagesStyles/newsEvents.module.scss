@@ -1,6 +1,5 @@
-
 .newsBox {
-  color: var(--primary-blue);
+  color: var(--base-blue);
   padding: 5%;
 }
 
@@ -39,8 +38,6 @@
   //a:active  {color: var(--primary-blue);}   /* 鼠标点击时 */
 }
 
-
-
 .imageContainer {
   position: relative;
 
@@ -63,7 +60,6 @@
   opacity: 0;
   transition: opacity 0.3s ease;
 }
-
 
 .newsTitle {
   margin: 10px 0;
@@ -96,7 +92,7 @@
 }
 
 .authorCircle {
-  background-color: var(--primary-blue);
+  background-color: var(--base-blue);
   color: white;
   width: 30px;
   height: 30px;
@@ -130,7 +126,6 @@
   //  font-size: 2rem;
   //}
 }
-
 
 /*
 

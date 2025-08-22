@@ -26,15 +26,14 @@
     "prettier"
   ],
   "rules": {
-    "@typescript-eslint/no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": "error",
     "@typescript-eslint/no-explicit-any": "off", // 允许使用any
     "prefer-const": "off",
     "@next/next/no-img-element": "off",
     "@typescript-eslint/explicit-module-boundary-types": "off", // 例如，关闭显式模块边界类型
     "react-hooks/exhaustive-deps": "warn", // 将依赖项缺失警告设置为警告
     "@typescript-eslint/no-non-null-assertion": "warn", // 将非空断言警告设置为警告
-    "react/jsx-key": "error",
-    "no-unused-vars": "off"
+    "react/jsx-key": "error"
   },
   "env": {
     "browser": true,

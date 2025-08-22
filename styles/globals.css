@@ -29,6 +29,7 @@ body {
   --primary-grey: #d3d3d3;
   --icon-grey-color: #939393;
   --base-blue: #1f5bb3;
+  --hover-blue: #8cb6d8;
 
   /* 动态调整根字体大小，基于屏幕宽度 */
   font-size: calc(10px + 1vw); /* 默认字体适配 */

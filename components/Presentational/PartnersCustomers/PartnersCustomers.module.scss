@@ -11,7 +11,7 @@
 }
 
 .top {
-  color: #003680;
+  color: var(--base-blue);
   width: 100%;
   text-align: left;
   display: flex;
@@ -21,13 +21,13 @@
 }
 
 .cardsContainer {
-display: block;
+  display: block;
   width: 100%;
-  //.slick-slide {
-  //  display: flex;
-  //  justify-content: center;
-  //
-  //}
+  // .slick-slide {
+  //   display: flex;
+  //   justify-content: center;
+
+  // }
 }
 .slider {
   //background-color: #ff5722;
@@ -37,7 +37,7 @@ display: block;
   //background-color: #1AA034;
   display: grid;
   padding: 10px;
-width: 100%;
+  width: 100%;
   grid-template-columns: repeat(8, 1fr);
   grid-auto-rows: minmax(100px, auto);
   gap: 10px; // Adjust gap as needed
@@ -60,12 +60,10 @@ width: 100%;
   //align-items: center;
   width: 12.5%;
   padding: 0.5%;
-  height:auto;
+  height: auto;
   -webkit-filter: grayscale(1); /* Webkit */
   /* IE6-9 */
   filter: grayscale(1); /* W3C */
-
-
 }
 //
 //@media (max-width: 1200px) {

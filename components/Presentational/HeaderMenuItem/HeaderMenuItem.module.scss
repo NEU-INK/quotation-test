@@ -14,7 +14,7 @@
 .submenuItems2 {
   width: 100%;
   font-size: 2.6rem;
-  color: #003680;
+  color: var(--base-blue);
   padding: 10px 20px;
   cursor: pointer;
   text-align: left;
@@ -22,6 +22,6 @@
 }
 
 .submenuItems2:hover {
-  background-color: #003680;
+  background-color: var(--base-blue);
   color: #fff;
 }

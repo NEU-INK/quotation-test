@@ -11,13 +11,13 @@
 .stepTitle {
   font-family: 'HS';
   font-weight: bold;
-  color: #003680;
+  color: var(--base-blue);
 }
 
 .stepTip {
   margin-top: 10px;
   font-family: 'HS';
-  color: #003680;
+  color: var(--base-blue);
 }
 
 .optionContainer {
@@ -35,7 +35,7 @@
   &:last-of-type {
     margin-right: 0;
   }
-  border: 1px solid #003680;
+  border: 1px solid var(--base-blue);
   padding: 10px 16px;
   border-radius: 12px;
   font-size: 2.9rem;
@@ -48,8 +48,8 @@
 
 .optionItemSelected {
   border: none;
-  color: #003680;
-  background-color: #8cb6d8;
+  color: #fff;
+  background-color: var(--hover-blue);
 }
 
 .optionItemMaterial {
@@ -57,8 +57,8 @@
 }
 
 .optionItemMaterialSelected {
-  border: 2px solid #003680;
-  color: #003680;
+  border: 2px solid var(--base-blue);
+  color: var(--base-blue);
 }
 
 .quantityContainer {
@@ -85,11 +85,11 @@
   margin-top: 10px;
   margin-bottom: 10px;
   border: none;
-  border-bottom: 1px solid #003680;
+  border-bottom: 1px solid var(--base-blue);
   padding: 10px 14px;
   // border-color: #003680 !important;
   font-size: 3rem;
-  color: #003680;
+  color: var(--base-blue);
   background-color: transparent;
   outline: none;
   &::-webkit-outer-spin-button,
@@ -105,12 +105,6 @@
 
 .dialogContent {
   padding: 16px 24px;
-}
-
-.quotationItem {
-  display: flex;
-  padding-bottom: 4px;
-  border-bottom: 1px solid #003680;
 }
 
 .dialogFooter {

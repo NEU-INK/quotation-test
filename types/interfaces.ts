@@ -148,3 +148,10 @@ export interface SortbyIndexParam {
   slug: string
   frontmatter: { [key: string]: string | number }
 }
+
+export interface ITimeNode {
+  id: string
+  year: number
+  describe: string
+  imgUrl: string
+}

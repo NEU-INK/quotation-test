@@ -6,6 +6,7 @@ import { Box, Typography, Dialog, DialogTitle, List, ListItem, ListItemText } fr
 import styles from '../styles/pagesStyles/quotation.module.scss'
 import { useDevice } from '../utils/deviceContext'
 import useQuotation from '../hooks/useQuotation'
+import { setNumber } from '../utils/common'
 import WaltButton from '../components/Smart/WaltButton/WaltButton'
 
 const ProductQuotation: React.FC = () => {
@@ -159,7 +160,7 @@ const ProductQuotation: React.FC = () => {
         : quantity >= 500 && quantity <= 999
         ? surchargeBetween500And999
         : surchargeOver1000
-    const _total = Number((price * quantity * surcharge).toFixed(2))
+    const _total = setNumber(price * quantity * surcharge)
     setTotal(_total)
     category !== 'Baby'
       ? setQuotation([
@@ -457,13 +458,13 @@ const ProductQuotation: React.FC = () => {
           <WaltButton
             text={'PREVIEW'}
             onClick={showPriview}
-            borderColor="#003680"
-            textColor="#003680"
-            hoverBackgroundColor="#003680"
-            hoverBorderColor="#003680"
+            borderColor="var(--base-blue)"
+            textColor="var(--base-blue)"
+            hoverBackgroundColor="var(--base-blue)"
+            hoverBorderColor="var(--base-blue)"
             hoverTextColor="white"
-            activeBackgroundColor="#003680"
-            activeBorderColor="#003680"
+            activeBackgroundColor="var(--base-blue)"
+            activeBorderColor="var(--base-blue)"
             activeTextColor="white"
             style={{
               // width: '50%',
@@ -514,29 +515,22 @@ const ProductQuotation: React.FC = () => {
             fontSize: '3.6rem',
             fontFamily: 'HS',
             fontWeight: 'bold',
-            color: '#003680',
+            color: 'var(--base-blue)',
           }}
         >
           QUOTATION
         </DialogTitle>
         <Box className={styles.dialogContent}>
-          {/* {quotation.map((item) => (
-            <Box key={item.label} className={styles.quotationItem}>
-              <label htmlFor=""></label>
-                <ListItemText primary={item.label} />
-                <ListItemText primary={item.value} />
-              </Box>
-            ))} */}
           <List
             sx={{
               padding: 0,
               '& .MuiListItem-root': {
                 marginBottom: '3rem',
-                borderBottom: '1px solid #003680',
+                borderBottom: '1px solid var(--base-blue)',
                 padding: '4px',
                 '& .MuiListItemText-root': {
                   maxHeight: '50%',
-                  color: '#003680',
+                  color: 'var(--base-blue)',
                   '&:first-of-type': {
                     width: '5rem',
                     span: {
@@ -566,13 +560,13 @@ const ProductQuotation: React.FC = () => {
           <WaltButton
             text={'Cancel'}
             onClick={() => setPreviewDialogShow(false)}
-            borderColor="#003680"
-            textColor="#003680"
-            hoverBackgroundColor="#003680"
-            hoverBorderColor="#003680"
+            borderColor="var(--base-blue)"
+            textColor="var(--base-blue)"
+            hoverBackgroundColor="var(--base-blue)"
+            hoverBorderColor="var(--base-blue)"
             hoverTextColor="white"
-            activeBackgroundColor="#003680"
-            activeBorderColor="#003680"
+            activeBackgroundColor="var(--base-blue)"
+            activeBorderColor="var(--base-blue)"
             activeTextColor="white"
             style={{
               fontSize: `${isMobile ? '2rem' : '2.76rem'}`,
@@ -580,18 +574,18 @@ const ProductQuotation: React.FC = () => {
           />
           <WaltButton
             text={'Contact Us'}
-            onClick={confirmData}
-            borderColor="#003680"
-            textColor="#003680"
-            hoverBackgroundColor="#003680"
-            hoverBorderColor="#003680"
+            borderColor="var(--base-blue)"
+            textColor="var(--base-blue)"
+            hoverBackgroundColor="var(--base-blue)"
+            hoverBorderColor="var(--base-blue)"
             hoverTextColor="white"
-            activeBackgroundColor="#003680"
-            activeBorderColor="#003680"
+            activeBackgroundColor="var(--base-blue)"
+            activeBorderColor="var(--base-blue)"
             activeTextColor="white"
             style={{
               fontSize: `${isMobile ? '2rem' : '2.76rem'}`,
             }}
+            onClick={confirmData}
           />
         </Box>
       </Dialog>

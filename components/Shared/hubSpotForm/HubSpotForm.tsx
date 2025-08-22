@@ -240,11 +240,11 @@ const HubSpotForm: React.FC<{
     <Box>
       <div className={styles.formWrapper}>
         <Typography
-          color={'#0D3875'}
           mb={'4.5rem'}
           fontWeight={'bold'}
           fontSize={`${isMobile ? '10rem' : '9.6rem'}`}
           fontFamily={'HC'}
+          color={'var(--base-blue)'}
           textAlign={'center'}
         >
           CONTACT US

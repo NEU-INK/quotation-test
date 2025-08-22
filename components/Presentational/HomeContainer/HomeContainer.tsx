@@ -97,18 +97,18 @@ const HomeContainer = () => {
 
                   <WaltButton
                     text={video.btnText}
-                    icon="./icons/walttec/home-shopping-cart.png" // 使用图片路径
-                    onClick={() => router.push(video.btnLink)}
+                    icon="./icons/walttec/home-shopping-cart.png"
                     iconPosition="left"
                     borderColor="white"
                     textColor="white"
-                    hoverBackgroundColor="#003680"
-                    hoverBorderColor="#003680"
+                    hoverBackgroundColor="var(--base-blue)"
+                    hoverBorderColor="var(--base-blue)"
                     hoverTextColor="white"
-                    activeBackgroundColor="#003680"
-                    activeBorderColor="#003680"
+                    activeBackgroundColor="var(--base-blue)"
+                    activeBorderColor="var(--base-blue)"
                     activeTextColor="white"
-                    style={{ fontSize: `${isMobile ? '2rem' : '2.6rem'}` }} // 传入自定义样式
+                    style={{ fontSize: `${isMobile ? '2rem' : '2.6rem'}` }}
+                    onClick={() => router.push(video.btnLink)}
                   />
                 </Box>
               ) : (

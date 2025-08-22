@@ -1,4 +1,3 @@
-// import { homeData } from '../data/data'
 import Head from 'next/head'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
@@ -15,7 +14,6 @@ import WaltButton from '../components/Smart/WaltButton/WaltButton'
 
 const settings = {
   dotsClass: 'slick-dots slick-thumb home-container-slick-dots ',
-
   dots: true,
   infinite: true,
   speed: 500,
@@ -40,10 +38,7 @@ const sliderList = [
 // 页面组件，接收从 getStaticProps 获取的数据作为 props
 export default function Products() {
   const { isMobile } = useDevice()
-
   const router = useRouter()
-
-  // const { title } = homeData
   return (
     <>
       <Head>
@@ -127,19 +122,19 @@ export default function Products() {
                   <WaltButton
                     text={video.btnText}
                     icon="/icons/walttec/home-shopping-cart.png" // 使用图片路径
-                    onClick={() => router.push(video.btnLink)}
                     iconPosition="left"
                     borderColor="white"
                     textColor="white"
-                    hoverBackgroundColor="#003680"
-                    hoverBorderColor="#003680"
+                    hoverBackgroundColor="var(--base-blue)"
+                    hoverBorderColor="var(--base-blue)"
                     hoverTextColor="white"
-                    activeBackgroundColor="#003680"
-                    activeBorderColor="#003680"
+                    activeBackgroundColor="var(--base-blue)"
+                    activeBorderColor="var(--base-blue)"
                     activeTextColor="white"
                     style={{
                       fontSize: `${isMobile ? '2rem' : '2.6rem'}`,
                     }} // 传入自定义样式
+                    onClick={() => router.push(video.btnLink)}
                   />
                 </Box>
               </Box>

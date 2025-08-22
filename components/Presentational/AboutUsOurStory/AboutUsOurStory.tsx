@@ -43,7 +43,6 @@ const data = [
       },
     ],
   },
-
   {
     id: 3,
     sup: 3,
@@ -66,7 +65,6 @@ const data = [
       },
     ],
   },
-
   {
     id: 4,
     sup: 4,
@@ -109,7 +107,6 @@ const data = [
       },
     ],
   },
-
   {
     id: 6,
     sup: 6,
@@ -126,7 +123,6 @@ const data = [
       },
     ],
   },
-
   {
     id: 7,
     sup: 7,
@@ -143,7 +139,6 @@ const data = [
       },
     ],
   },
-
   {
     id: 8,
     sup: 8,
@@ -164,7 +159,6 @@ const data = [
       },
     ],
   },
-
   {
     id: 9,
     sup: 1,
@@ -181,7 +175,6 @@ const data = [
       },
     ],
   },
-
   {
     id: 10,
     sup: 2,
@@ -198,7 +191,6 @@ const data = [
       },
     ],
   },
-
   {
     id: 11,
     sup: 3,
@@ -215,7 +207,6 @@ const data = [
       },
     ],
   },
-
   {
     id: 12,
     sup: 4,
@@ -232,7 +223,6 @@ const data = [
       },
     ],
   },
-
   {
     id: 13,
     sup: 5,
@@ -249,7 +239,6 @@ const data = [
       },
     ],
   },
-
   {
     id: 14,
     sup: 5,
@@ -266,7 +255,6 @@ const data = [
       },
     ],
   },
-
   {
     id: 15,
     sup: 6,
@@ -283,7 +271,6 @@ const data = [
       },
     ],
   },
-
   {
     id: 16,
     sup: 7,
@@ -300,7 +287,6 @@ const data = [
       },
     ],
   },
-
   {
     id: 17,
     sup: 8,
@@ -328,9 +314,7 @@ const AboutUsOurStory: React.FC = () => {
   const carouselRef = useRef<HTMLDivElement>(null)
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null)
 
-  const handleImageClick = (index: number) => {
-    setSelectedIndex(index)
-  }
+  const handleImageClick = (index: number) => setSelectedIndex(index)
 
   const startAutoSlide = () => {
     intervalRef.current = setInterval(() => {
@@ -398,12 +382,14 @@ const AboutUsOurStory: React.FC = () => {
           fontSize={`${isMobile ? '4rem' : '9.6rem'}`}
           fontWeight={800}
           fontFamily={'HC'}
+          color={'var(--base-blue)'}
         >
           OUR STORY
         </Typography>
         <Typography
           fontFamily={'HS'}
           fontSize={`${isMobile ? '2rem' : '2.6rem'}`}
+          color={'var(--base-blue)'}
           style={{ textAlign: 'right' }}
           lineHeight={1}
         >

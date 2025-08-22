@@ -27,7 +27,6 @@ const dataList = [
 
 const settings1 = {
   dotsClass: 'slick-dots slick-thumb home-container-slick-dots ',
-
   dots: true,
   infinite: true,
   speed: 500,
@@ -125,7 +124,7 @@ const Sustainability = () => {
     imageSrc: string
   }) => {
     setActiveSecondary(secondary)
-    console.log('secondary-----', secondary)
+    // console.log('secondary-----', secondary)
 
     // 获取滚动容器的高度和位置
     const containerHeight = scrollContainerRef.current?.scrollHeight || 0
@@ -271,6 +270,7 @@ const Sustainability = () => {
           >
             <Typography
               fontSize={`${isMobile ? '4rem' : '9.6rem'}`}
+              color={'var(--base-blue)'}
               sx={{ fontWeight: 600, lineHeight: 1, fontFamily: 'HC' }}
             >
               CARBON ZERO ECO PARK
@@ -294,7 +294,7 @@ const Sustainability = () => {
                         fontFamily: 'HS',
                         cursor: 'pointer',
                         wordBreak: 'break-word',
-                        color: activePrimary.id === item.id ? '#ADD8E6' : 'inherit',
+                        color: activePrimary.id === item.id ? '#ADD8E6' : 'var(--base-blue)',
                       }}
                       onClick={() => setActivePrimary(item)}
                     >
@@ -312,7 +312,7 @@ const Sustainability = () => {
                     height: 0,
                     borderBottom: '1rem solid transparent',
                     borderTop: '1rem solid transparent',
-                    borderLeft: '1rem solid #13357b',
+                    borderLeft: '1rem solid var(--base-blue)',
                   }}
                 />
               </Box>
@@ -340,7 +340,7 @@ const Sustainability = () => {
 
                         cursor: 'pointer',
                         paddingLeft: '10px',
-                        color: activeSecondary.id === secondary.id ? '#ADD8E6' : 'inherit',
+                        color: activeSecondary.id === secondary.id ? '#ADD8E6' : 'var(--base-blue)',
                       }}
                       fontSize={`${isMobile ? '2rem' : '3.6rem'}`}
                     >
@@ -355,6 +355,7 @@ const Sustainability = () => {
             <Box style={{ overflowY: 'auto', maxHeight: '150px', marginTop: '20px' }}>
               <Typography
                 fontSize={`${isMobile ? '2rem' : '2.6rem'}`}
+                color={'var(--base-blue)'}
                 sx={{ fontFamily: 'HS', wordBreak: 'break-word' }}
               >
                 {activeSecondary.description}
@@ -380,6 +381,7 @@ const Sustainability = () => {
             lineHeight={2}
             fontWeight={800}
             fontFamily={'HC'}
+            color={'var(--base-blue)'}
             textAlign={'center'}
           >
             ECO-FRIENDLY MATERIALS
@@ -396,14 +398,12 @@ const Sustainability = () => {
                     style={{ width: '100%', height: 'auto', borderRadius: '50%' }}
                   />
                   {/*<Box className={styles.materialsText}>*/}
-
                   {/*    <Typography*/}
                   {/*        sx={{fontSize: '2.4vw', fontWeight: 600, lineHeight: 1, fontFamily: 'HS',}} textAlign={'center'}*/}
                   {/*        >*/}
                   {/*        <sup style={{fontSize:'1vw'}}>[{item.id}]</sup>*/}
                   {/*        {item.title}*/}
                   {/*    </Typography>*/}
-
                   {/*</Box>*/}
 
                   <Box className={styles.materialsText}>
@@ -412,6 +412,7 @@ const Sustainability = () => {
                       {/* 外层负责居中且换行左对齐 */}
                       <Typography
                         fontSize={`${isMobile ? '3rem' : '4.8rem'}`}
+                        color={'var(--base-blue)'}
                         sx={{
                           fontWeight: 600,
                           lineHeight: 1.2, // 行高适中
@@ -449,6 +450,7 @@ const Sustainability = () => {
             lineHeight={2}
             fontWeight={800}
             fontFamily={'HS'}
+            color={'var(--base-blue)'}
           >
             INVITATION
           </Typography>
@@ -457,6 +459,7 @@ const Sustainability = () => {
             lineHeight={1.2}
             fontWeight={800}
             fontFamily={'HS'}
+            color={'var(--base-blue)'}
           >
             Achieving a carbon neutral world is one of the <br /> most important objectives of our
             time.
@@ -466,6 +469,7 @@ const Sustainability = () => {
             fontSize={`${isMobile ? '2rem' : '3.6rem'}`}
             lineHeight={1.2}
             fontFamily={'HS'}
+            color={'var(--base-blue)'}
           >
             We are always looking for sustainability partners to join us on this
             <br /> journey including carbon accounting, certification, engineering, <br />
@@ -483,21 +487,21 @@ const Sustainability = () => {
           >
             <WaltButton
               text=" PARTNER WITH US"
-              borderColor="#13357a"
-              backgroundColor="#13357a"
-              textColor="white"
-              onClick={() => router.push('/contact-us')}
-              hoverBackgroundColor="#13357a"
-              hoverBorderColor="#13357a"
+              borderColor="var(--base-blue)"
+              backgroundColor="var(--base-blue)"
+              textColor="#fff"
+              hoverBackgroundColor="var(--base-blue)"
+              hoverBorderColor="var(--base-blue)"
               hoverTextColor="white"
-              activeBackgroundColor="#13357a"
-              activeBorderColor="#13357a"
+              activeBackgroundColor="var(--base-blue)"
+              activeBorderColor="var(--base-blue)"
               activeTextColor="white"
               style={{
                 fontSize: `${isMobile ? '2rem' : '2.6rem'}`,
                 fontWeight: 600,
                 width: '340px',
               }} // 传入自定义样式
+              onClick={() => router.push('/contact-us')}
             />
           </Box>
         </Box>
