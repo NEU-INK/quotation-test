@@ -161,16 +161,22 @@ const OurJourney = () => {
     timelineData,
     selectedNode,
     setSelectedNode,
+    getNodeWidth,
+    setSelectedNodePos,
   } = useTimeline()
 
-  const timelineWidth = 655
+  const [timelineWidth, setTimelineWidth] = useState(0)
 
   useEffect(() => {
     const { width } = timelineContainerRef.current!.getBoundingClientRect()
     const _width = setNumber(width / 2)
     setCenterX(_width)
-    setTransleteX(setNumber(_width - timelineWidth))
-    setSelectedNode(timelineData[timelineData.length - 1])
+    const total = timelineData.length
+    const _timelineWidth = setNumber(total * getNodeWidth())
+    setTimelineWidth(_timelineWidth)
+    setTransleteX(setNumber(_width - _timelineWidth))
+    setSelectedNode(timelineData[total - 1])
+    setSelectedNodePos(total - 1)
   }, [])
 
   const timelineContainerRef = useRef<HTMLDivElement>(null)
@@ -202,7 +208,7 @@ const OurJourney = () => {
       setTransleteX(finalVal)
       setLastX(clientX)
     },
-    [centerX, isDragging, lastX, setLastX, setTransleteX, translateX]
+    [centerX, isDragging, lastX, setLastX, setTransleteX, timelineWidth, translateX]
   )
 
   const handleDragEnd = useCallback(
@@ -213,10 +219,11 @@ const OurJourney = () => {
     [setIsDragging]
   )
 
-  const selectTimeNode = (target: ITimeNode) => {
+  const selectTimeNode = (target: ITimeNode, index: number) => {
     // 防止干扰拖拽
     if (isDragging) return
     setSelectedNode(target)
+    setSelectedNodePos(index)
   }
 
   return (
@@ -264,7 +271,7 @@ const OurJourney = () => {
               onTouchStart={handleDragStart}
               onTouchMove={handleDragMove}
             >
-              {timelineData.map((item) => (
+              {timelineData.map((item, index) => (
                 <Box key={item.id} className={styles.timeNodeContainer}>
                   <Box
                     className={
@@ -274,7 +281,10 @@ const OurJourney = () => {
                     }
                   >
                     <span className={styles.timeNode_lineSegment}></span>
-                    <Box className={styles.timeNode} onClick={() => selectTimeNode(item)}></Box>
+                    <Box
+                      className={styles.timeNode}
+                      onClick={() => selectTimeNode(item, index)}
+                    ></Box>
                     <span className={styles.timeNode_lineSegment}></span>
                   </Box>
                   <Typography
@@ -289,7 +299,7 @@ const OurJourney = () => {
                         selectedNode?.id === item.id ? 'var(--base-blue)' : 'var(--hover-blue)',
                       cursor: 'pointer',
                     }}
-                    onClick={() => selectTimeNode(item)}
+                    onClick={() => selectTimeNode(item, index)}
                   >
                     {item.year}
                   </Typography>
