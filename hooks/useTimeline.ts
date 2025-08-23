@@ -12,91 +12,150 @@ export default function useTimeline() {
     {
       id: '0',
       year: 1993,
-      describe: '',
-      imgUrl: '/images/timeline/1993.jpg',
+      content: [
+        {
+          imgUrl: '/images/timeline/1993.jpg',
+          describe: '',
+        },
+      ],
     },
     {
       id: '1',
       year: 1997,
-      describe: '',
-      imgUrl: '/images/timeline/1997.jpg',
+      content: [
+        {
+          imgUrl: '/images/timeline/1997.jpg',
+          describe: '',
+        },
+      ],
     },
     {
       id: '2',
       year: 2000,
-      describe: '',
-      imgUrl: '/images/timeline/2000.jpg',
+      content: [
+        {
+          imgUrl: '/images/timeline/2000.jpg',
+          describe: '',
+        },
+      ],
     },
     {
       id: '3',
       year: 2004,
-      describe: '',
-      imgUrl: '/images/timeline/2004.jpg',
+      content: [
+        {
+          imgUrl: '/images/timeline/2004.jpg',
+          describe: '',
+        },
+      ],
     },
     {
       id: '4',
       year: 2006,
-      describe: '',
-      imgUrl: '/images/timeline/2006.jpg',
+      content: [
+        {
+          imgUrl: '/images/timeline/2006.jpg',
+          describe: '',
+        },
+      ],
     },
     {
       id: '5',
       year: 2016,
-      describe: '',
-      imgUrl: '/images/timeline/2016.jpg',
+      content: [
+        {
+          imgUrl: '/images/timeline/2016.jpg',
+          describe: '',
+        },
+      ],
     },
     {
       id: '6',
       year: 2018,
-      describe: '',
-      imgUrl: '/images/timeline/2018.jpg',
+      content: [
+        {
+          imgUrl: '/images/timeline/2018.jpg',
+          describe: '',
+        },
+      ],
     },
     {
       id: '7',
       year: 2019,
-      describe: '',
-      imgUrl: '/images/timeline/2019.jpg',
+      content: [
+        {
+          imgUrl: '/images/timeline/2019.jpg',
+          describe: '',
+        },
+      ],
     },
     {
       id: '8',
       year: 2020,
-      describe: '',
-      imgUrl: '/images/timeline/2020.jpg',
+      content: [
+        {
+          imgUrl: '/images/timeline/2020.jpg',
+          describe: '',
+        },
+      ],
     },
     {
       id: '9',
       year: 2021,
-      describe: '',
-      imgUrl: '/images/timeline/2021.jpg',
+      content: [
+        {
+          imgUrl: '/images/timeline/2021.jpg',
+          describe: '',
+        },
+      ],
     },
     {
       id: '10',
       year: 2023,
-      describe: '',
-      imgUrl: '/images/timeline/2023.jpg',
+      content: [
+        {
+          imgUrl: '/images/timeline/2023.jpg',
+          describe: '',
+        },
+      ],
     },
     {
       id: '11',
       year: 2024,
-      describe: '',
-      imgUrl: '/images/timeline/2024.jpg',
+      content: [
+        {
+          imgUrl: '/images/timeline/2024.jpg',
+          describe: '',
+        },
+      ],
     },
   ]
   const [selectedNode, setSelectedNode] = useState<ITimeNode | null>(null)
 
-  const getNodeWidth = () => {
+  const getFontSize = () => {
     const baseSize = 10
     const dpr = window.devicePixelRatio || 1
-    const nodeWidth = (baseSize / dpr) * 14
-    return nodeWidth
+    return baseSize / dpr
   }
 
+  /**
+   * 节点中间部分+两边轴线的rem值
+   */
+  const timeNodeWidthRem = 11.5
+
+  const getNodeWidth = (remNumber: number) => getFontSize() * remNumber
+
   const setSelectedNodePos = (index: number) => {
-    const nodeWidth = setNumber(getNodeWidth())
+    const nodeWidth = setNumber(getNodeWidth(timeNodeWidthRem))
     // index已经少了1，所以不用再减1
     const width = setNumber((index + 0.5) * nodeWidth)
     setTransleteX(setNumber(centerX - width))
+
+    setContentTransleteX(setNumber(-index * timeNodeContentWidth))
   }
+
+  const [timeNodeContentWidth, setTimeNodeContentWidth] = useState(0)
+  const [contentTranslateX, setContentTransleteX] = useState(0)
 
   return {
     translateX,
@@ -110,7 +169,14 @@ export default function useTimeline() {
     timelineData,
     selectedNode,
     setSelectedNode,
+
+    timeNodeWidthRem,
     getNodeWidth,
     setSelectedNodePos,
+
+    timeNodeContentWidth,
+    setTimeNodeContentWidth,
+    contentTranslateX,
+    setContentTransleteX,
   }
 }

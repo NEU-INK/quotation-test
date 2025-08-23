@@ -1,6 +1,9 @@
 import { Box, Typography } from '@mui/material'
 import Image from 'next/image'
 import React, { useState, useRef, useEffect, useCallback } from 'react'
+import Slider from 'react-slick'
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
 import styles from './OurJourney.module.scss'
 import { useDevice } from '../../../utils/deviceContext'
 import useTimeline from '../../../hooks/useTimeline'
@@ -161,8 +164,15 @@ const OurJourney = () => {
     timelineData,
     selectedNode,
     setSelectedNode,
+
+    timeNodeWidthRem,
     getNodeWidth,
     setSelectedNodePos,
+
+    timeNodeContentWidth,
+    setTimeNodeContentWidth,
+    contentTranslateX,
+    setContentTransleteX,
   } = useTimeline()
 
   const [timelineWidth, setTimelineWidth] = useState(0)
@@ -171,8 +181,8 @@ const OurJourney = () => {
     const { width } = timelineContainerRef.current!.getBoundingClientRect()
     const _width = setNumber(width / 2)
     setCenterX(_width)
-    const _timelineWidth = setNumber(timelineData.length * getNodeWidth())
-    setTimelineWidth(_timelineWidth)
+    setTimeNodeContentWidth(_width)
+    setTimelineWidth(setNumber(timelineData.length * getNodeWidth(timeNodeWidthRem)))
   }, [])
 
   useEffect(() => {
@@ -229,6 +239,18 @@ const OurJourney = () => {
     setSelectedNodePos(index)
   }
 
+  const sliderConfig = {
+    dots: true,
+    // dotsClass: 'slick-dots slick-thumb home-container-slick-dots ',
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplaySpeed: 10000,
+    autoplay: true,
+    arrows: false,
+  }
+
   return (
     <Box className={styles.aboutUs}>
       <Box sx={{ width: '100%', height: '100%', position: 'relative' }}>
@@ -259,8 +281,8 @@ const OurJourney = () => {
           <Box
             ref={timelineContainerRef}
             className={styles.timeline_lineContainer}
-            onMouseUp={handleDragEnd}
-            onTouchEnd={handleDragEnd}
+            // onMouseUp={handleDragEnd}
+            // onTouchEnd={handleDragEnd}
           >
             <Box
               ref={timelineRef}
@@ -268,12 +290,13 @@ const OurJourney = () => {
               sx={{
                 width: `${timelineWidth}px`,
                 margin: '0 auto',
-                // transform: `translateX(${translateX}px)`,
+                // transform: `translate3d(${translateX}px,0,0)`,
+                // transition: 'opacity 0.3s ease-out, transform 0.3s ease-out',
               }}
-              onMouseDown={handleDragStart}
-              onMouseMove={handleDragMove}
-              onTouchStart={handleDragStart}
-              onTouchMove={handleDragMove}
+              // onMouseDown={handleDragStart}
+              // onMouseMove={handleDragMove}
+              // onTouchStart={handleDragStart}
+              // onTouchMove={handleDragMove}
             >
               {timelineData.map((item, index) => (
                 <Box key={item.id} className={styles.timeNodeContainer}>
@@ -285,10 +308,7 @@ const OurJourney = () => {
                     }
                   >
                     <span className={styles.timeNode_lineSegment}></span>
-                    <Box
-                      className={styles.timeNode}
-                      onClick={() => selectTimeNode(item, index)}
-                    ></Box>
+                    <Box className={styles.timeNode} onClick={() => selectTimeNode(item, index)} />
                     <span className={styles.timeNode_lineSegment}></span>
                   </Box>
                   <Typography
@@ -313,21 +333,95 @@ const OurJourney = () => {
           </Box>
 
           {selectedNode?.id && (
-            <Box className={styles.timeNodeContent}>
-              <img
-                src={selectedNode.imgUrl}
-                className={styles.timeNodeContentImg}
-                alt={selectedNode.describe}
-              />
-              <Box className={styles.timeNodeContentDetail}>
-                <Typography fontSize={'3.6rem'} fontWeight={800} lineHeight={1.5} fontFamily={'HC'}>
-                  {selectedNode.year}
-                </Typography>
-                <Typography fontSize={'2rem'} fontWeight={800} lineHeight={1.5} fontFamily={'HC'}>
-                  {selectedNode.describe}
-                </Typography>
+            <Box className={styles.timeNodeContentContainer}>
+              <Box
+                className={styles.timeNodeContentLine}
+                sx={{
+                  width: `${timelineWidth}px`,
+                  transform: `translate3d(${contentTranslateX}px,0,0)`,
+                  transition: 'opacity 0.3s ease-out, transform 0.3s ease-out',
+                }}
+              >
+                {timelineData.map((item) => (
+                  <Box
+                    key={item.id}
+                    className={styles.timeNodeContent}
+                    sx={{
+                      width: `${timeNodeContentWidth}px !important`,
+                      flexShrink: 0,
+                    }}
+                  >
+                    <img
+                      src={item.content[0].imgUrl}
+                      className={styles.timeNodeContentImg}
+                      alt={item.content[0].describe}
+                    />
+                    <Box className={styles.timeNodeContentDetail}>
+                      <Typography
+                        fontSize={'3.6rem'}
+                        fontWeight={800}
+                        lineHeight={1.5}
+                        fontFamily={'HC'}
+                      >
+                        {item.year}
+                      </Typography>
+                      <Typography
+                        fontSize={'2rem'}
+                        fontWeight={800}
+                        lineHeight={1.5}
+                        fontFamily={'HC'}
+                      >
+                        {item.content[0].describe}
+                      </Typography>
+                    </Box>
+                  </Box>
+                  // <Slider key={item.id} {...sliderConfig} className={styles.sliderContainer}>
+                  //   {item.content.map((child, index) => (
+                  //     <Box key={index} className={styles.timeNodeContent}>
+                  //       <img
+                  //         src={child.imgUrl}
+                  //         className={styles.timeNodeContentImg}
+                  //         alt={child.describe}
+                  //       />
+                  //       <Box className={styles.timeNodeContentDetail}>
+                  //         <Typography
+                  //           fontSize={'3.6rem'}
+                  //           fontWeight={800}
+                  //           lineHeight={1.5}
+                  //           fontFamily={'HC'}
+                  //         >
+                  //           {item.year}
+                  //         </Typography>
+                  //         <Typography
+                  //           fontSize={'2rem'}
+                  //           fontWeight={800}
+                  //           lineHeight={1.5}
+                  //           fontFamily={'HC'}
+                  //         >
+                  //           {child.describe}
+                  //         </Typography>
+                  //       </Box>
+                  //     </Box>
+                  //   ))}
+                  // </Slider>
+                ))}
               </Box>
             </Box>
+            // <Box className={styles.timeNodeContent}>
+            //   <img
+            //     src={selectedNode.imgUrl}
+            //     className={styles.timeNodeContentImg}
+            //     alt={selectedNode.describe}
+            //   />
+            //   <Box className={styles.timeNodeContentDetail}>
+            //     <Typography fontSize={'3.6rem'} fontWeight={800} lineHeight={1.5} fontFamily={'HC'}>
+            //       {selectedNode.year}
+            //     </Typography>
+            //     <Typography fontSize={'2rem'} fontWeight={800} lineHeight={1.5} fontFamily={'HC'}>
+            //       {selectedNode.describe}
+            //     </Typography>
+            //   </Box>
+            // </Box>
           )}
         </Box>
 

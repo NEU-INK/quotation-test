@@ -149,9 +149,13 @@ export interface SortbyIndexParam {
   frontmatter: { [key: string]: string | number }
 }
 
+export interface ITimeNodeContent {
+  imgUrl: string
+  describe: string
+}
+
 export interface ITimeNode {
   id: string
   year: number
-  describe: string
-  imgUrl: string
+  content: ITimeNodeContent[]
 }
