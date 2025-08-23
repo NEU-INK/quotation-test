@@ -171,13 +171,16 @@ const OurJourney = () => {
     const { width } = timelineContainerRef.current!.getBoundingClientRect()
     const _width = setNumber(width / 2)
     setCenterX(_width)
-    const total = timelineData.length
-    const _timelineWidth = setNumber(total * getNodeWidth())
+    const _timelineWidth = setNumber(timelineData.length * getNodeWidth())
     setTimelineWidth(_timelineWidth)
-    setTransleteX(setNumber(_width - _timelineWidth))
+  }, [])
+
+  useEffect(() => {
+    setTransleteX(setNumber(centerX - timelineWidth))
+    const total = timelineData.length
     setSelectedNode(timelineData[total - 1])
     setSelectedNodePos(total - 1)
-  }, [getNodeWidth, setCenterX, setSelectedNode, setSelectedNodePos, setTransleteX, timelineData])
+  }, [centerX, timelineWidth])
 
   const timelineContainerRef = useRef<HTMLDivElement>(null)
   const timelineRef = useRef<HTMLDivElement>(null)
