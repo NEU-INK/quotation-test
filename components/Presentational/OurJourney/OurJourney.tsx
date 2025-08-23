@@ -177,7 +177,7 @@ const OurJourney = () => {
     setTransleteX(setNumber(_width - _timelineWidth))
     setSelectedNode(timelineData[total - 1])
     setSelectedNodePos(total - 1)
-  }, [])
+  }, [getNodeWidth, setCenterX, setSelectedNode, setSelectedNodePos, setTransleteX, timelineData])
 
   const timelineContainerRef = useRef<HTMLDivElement>(null)
   const timelineRef = useRef<HTMLDivElement>(null)
