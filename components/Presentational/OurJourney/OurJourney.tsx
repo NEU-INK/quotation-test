@@ -267,7 +267,8 @@ const OurJourney = () => {
               className={styles.timeline_line}
               sx={{
                 width: `${timelineWidth}px`,
-                transform: `translateX(${translateX}px)`,
+                margin: '0 auto',
+                // transform: `translateX(${translateX}px)`,
               }}
               onMouseDown={handleDragStart}
               onMouseMove={handleDragMove}
