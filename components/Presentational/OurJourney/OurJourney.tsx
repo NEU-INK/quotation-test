@@ -393,18 +393,27 @@ const OurJourney = () => {
                           />
                           <Box className={styles.timeNodeContentDetail}>
                             <Typography
-                              fontSize={'3.6rem'}
+                              fontSize={'4.8rem'}
                               fontWeight={800}
                               lineHeight={1.5}
                               fontFamily={'HC'}
+                              sx={{
+                                marginBottom: '1rem',
+                              }}
                             >
                               {item.year}
                             </Typography>
                             <Typography
-                              fontSize={'2rem'}
+                              fontSize={'2.6rem'}
                               fontWeight={800}
                               lineHeight={1.5}
                               fontFamily={'HC'}
+                              // paragraph
+                              // sx={{
+                              //   textAlign: 'justify',
+                              //   textAlignLast: 'left',
+                              //   wordBreak: 'keep-all',
+                              // }}
                             >
                               {child.describe}
                             </Typography>

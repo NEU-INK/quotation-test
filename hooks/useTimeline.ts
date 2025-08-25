@@ -15,7 +15,7 @@ export default function useTimeline() {
       content: [
         {
           imgUrl: '/images/timeline/1991.jpg',
-          describe: '',
+          describe: 'Established factory in the United States.',
         },
       ],
     },
@@ -25,7 +25,7 @@ export default function useTimeline() {
       content: [
         {
           imgUrl: '/images/timeline/1993.jpg',
-          describe: '',
+          describe: 'LIN performance sports brand was launched in the United States.',
         },
       ],
     },
@@ -35,7 +35,7 @@ export default function useTimeline() {
       content: [
         {
           imgUrl: '/images/timeline/1997.jpg',
-          describe: '',
+          describe: `Created Private label + MD in the United States.`,
         },
       ],
     },
@@ -45,7 +45,7 @@ export default function useTimeline() {
       content: [
         {
           imgUrl: '/images/timeline/2000.jpg',
-          describe: '',
+          describe: 'Zhejiang Walt Knitting Co.,Ltd. was established in Haining,Chind.',
         },
       ],
     },
@@ -55,7 +55,7 @@ export default function useTimeline() {
       content: [
         {
           imgUrl: '/images/timeline/2004.jpg',
-          describe: '',
+          describe: 'Zhejiang Renfro Knitting Co.,Ltd. wast established in Haining,China.',
         },
       ],
     },
@@ -65,7 +65,7 @@ export default function useTimeline() {
       content: [
         {
           imgUrl: '/images/timeline/2006.jpg',
-          describe: '',
+          describe: 'Zhejiang Grace Knitting Co.,Ltd. was established in Haining,China.',
         },
       ],
     },
@@ -75,7 +75,7 @@ export default function useTimeline() {
       content: [
         {
           imgUrl: '/images/timeline/2010.jpg',
-          describe: '',
+          describe: 'Established Shanghai Cross Textile Technology Co.,Ltd. in Shanghai.',
         },
       ],
     },
@@ -85,7 +85,7 @@ export default function useTimeline() {
       content: [
         {
           imgUrl: '/images/timeline/2015.jpg',
-          describe: '',
+          describe: "On the road to becoming the world's largest  circular knitwear manufacturer.",
         },
       ],
     },
@@ -95,7 +95,8 @@ export default function useTimeline() {
       content: [
         {
           imgUrl: '/images/timeline/2016.jpg',
-          describe: '',
+          describe:
+            'The company began to transform,reform its products,add its own brand,and promote it to the world.Walt was selected as a "high-tech enterprise".',
         },
       ],
     },
@@ -105,11 +106,12 @@ export default function useTimeline() {
       content: [
         {
           imgUrl: '/images/timeline/2018.jpg',
-          describe: '',
+          describe:
+            "Started preparations for the first unmanned intelligent sock production workshop in China,joining the ranks of the world's first intelligent factories.",
         },
         {
           imgUrl: '/images/timeline/2018-2.jpg',
-          describe: '',
+          describe: 'Established a robotics intelligent R&D department in Taiwan.',
         },
       ],
     },
@@ -119,7 +121,7 @@ export default function useTimeline() {
       content: [
         {
           imgUrl: '/images/timeline/2019.jpg',
-          describe: '',
+          describe: 'Established Walt Cambodia Factory.',
         },
       ],
     },
@@ -129,7 +131,8 @@ export default function useTimeline() {
       content: [
         {
           imgUrl: '/images/timeline/2020.jpg',
-          describe: '',
+          describe:
+            'Walt Tech Group was rated as a "National Sports Industry Demonstration Project" by the General Administration of the Sport of China.',
         },
       ],
     },
@@ -139,7 +142,7 @@ export default function useTimeline() {
       content: [
         {
           imgUrl: '/images/timeline/2021.jpg',
-          describe: '',
+          describe: 'Established Walt Japan and Design + R&D Department.',
         },
       ],
     },
@@ -149,7 +152,7 @@ export default function useTimeline() {
       content: [
         {
           imgUrl: '/images/timeline/2023.jpg',
-          describe: '',
+          describe: 'Established Walt Mexico.',
         },
       ],
     },
@@ -159,7 +162,8 @@ export default function useTimeline() {
       content: [
         {
           imgUrl: '/images/timeline/2024.jpg',
-          describe: '',
+          describe:
+            'Walt Group successfully listed on the National Equities  Exchange and Quotation(NEEQ) and began building a zero-carbon sustainable eco-park in Cambodia.',
         },
       ],
     },

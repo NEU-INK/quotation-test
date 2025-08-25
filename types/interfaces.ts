@@ -152,6 +152,8 @@ export interface SortbyIndexParam {
 export interface ITimeNodeContent {
   imgUrl: string
   describe: string
+  emphasize?: string
+  subDescribe?: string
 }
 
 export interface ITimeNode {
