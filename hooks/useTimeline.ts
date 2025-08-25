@@ -11,6 +11,16 @@ export default function useTimeline() {
   const timelineData: ITimeNode[] = [
     {
       id: '0',
+      year: 1991,
+      content: [
+        {
+          imgUrl: '/images/timeline/1991.jpg',
+          describe: '',
+        },
+      ],
+    },
+    {
+      id: '1',
       year: 1993,
       content: [
         {
@@ -20,7 +30,7 @@ export default function useTimeline() {
       ],
     },
     {
-      id: '1',
+      id: '2',
       year: 1997,
       content: [
         {
@@ -30,7 +40,7 @@ export default function useTimeline() {
       ],
     },
     {
-      id: '2',
+      id: '3',
       year: 2000,
       content: [
         {
@@ -40,7 +50,7 @@ export default function useTimeline() {
       ],
     },
     {
-      id: '3',
+      id: '4',
       year: 2004,
       content: [
         {
@@ -50,7 +60,7 @@ export default function useTimeline() {
       ],
     },
     {
-      id: '4',
+      id: '5',
       year: 2006,
       content: [
         {
@@ -60,7 +70,27 @@ export default function useTimeline() {
       ],
     },
     {
-      id: '5',
+      id: '6',
+      year: 2010,
+      content: [
+        {
+          imgUrl: '/images/timeline/2010.jpg',
+          describe: '',
+        },
+      ],
+    },
+    {
+      id: '7',
+      year: 2015,
+      content: [
+        {
+          imgUrl: '/images/timeline/2015.jpg',
+          describe: '',
+        },
+      ],
+    },
+    {
+      id: '8',
       year: 2016,
       content: [
         {
@@ -70,17 +100,21 @@ export default function useTimeline() {
       ],
     },
     {
-      id: '6',
+      id: '9',
       year: 2018,
       content: [
         {
           imgUrl: '/images/timeline/2018.jpg',
           describe: '',
         },
+        {
+          imgUrl: '/images/timeline/2018-2.jpg',
+          describe: '',
+        },
       ],
     },
     {
-      id: '7',
+      id: '10',
       year: 2019,
       content: [
         {
@@ -90,7 +124,7 @@ export default function useTimeline() {
       ],
     },
     {
-      id: '8',
+      id: '11',
       year: 2020,
       content: [
         {
@@ -100,7 +134,7 @@ export default function useTimeline() {
       ],
     },
     {
-      id: '9',
+      id: '12',
       year: 2021,
       content: [
         {
@@ -110,7 +144,7 @@ export default function useTimeline() {
       ],
     },
     {
-      id: '10',
+      id: '13',
       year: 2023,
       content: [
         {
@@ -120,7 +154,7 @@ export default function useTimeline() {
       ],
     },
     {
-      id: '11',
+      id: '14',
       year: 2024,
       content: [
         {
@@ -141,7 +175,7 @@ export default function useTimeline() {
   /**
    * 节点中间部分+两边轴线的rem值
    */
-  const timeNodeWidthRem = 11.5
+  const timeNodeWidthRem = 10
 
   const getNodeWidth = (remNumber: number) => getFontSize() * remNumber
 

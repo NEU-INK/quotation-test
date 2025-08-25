@@ -44,12 +44,13 @@ const HeaderMenuItem: React.FC<HeaderMenuItemProps> = ({
         sx={{
           height: 70,
           display: 'flex',
-          margin: isMobile ? '0 10px' : '0 20px',
+          margin: isMobile ? '0 1.5rem' : '0 3rem',
           minWidth: isMobile ? '100px' : 'auto',
           justifyContent: isMobile ? 'flex-start' : 'center',
           '&:hover': {
             color: 'var(--hover-blue)',
           },
+          padding: '6px 2rem',
         }}
       >
         <Typography

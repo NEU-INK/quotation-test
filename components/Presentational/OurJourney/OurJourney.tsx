@@ -240,15 +240,14 @@ const OurJourney = () => {
   }
 
   const sliderConfig = {
-    dots: true,
-    // dotsClass: 'slick-dots slick-thumb home-container-slick-dots ',
+    dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplaySpeed: 10000,
+    autoplaySpeed: 5000,
     autoplay: true,
-    arrows: false,
+    arrows: true,
   }
 
   return (
@@ -312,13 +311,13 @@ const OurJourney = () => {
                     <span className={styles.timeNode_lineSegment}></span>
                   </Box>
                   <Typography
+                    className={styles.timeNodeTitle}
                     fontSize={'2.9rem'}
                     fontWeight={800}
                     lineHeight={1.5}
                     fontFamily={'HC'}
                     textAlign={'center'}
                     sx={{
-                      marginTop: '1rem',
                       color:
                         selectedNode?.id === item.id ? 'var(--base-blue)' : 'var(--hover-blue)',
                       cursor: 'pointer',
@@ -343,6 +342,39 @@ const OurJourney = () => {
                 }}
               >
                 {timelineData.map((item) => (
+                  // <Box
+                  //   key={item.id}
+                  //   className={styles.timeNodeContent}
+                  //   sx={{
+                  //     width: `${timeNodeContentWidth}px !important`,
+                  //     flexShrink: 0,
+                  //   }}
+                  // >
+                  //   <img
+                  //     src={item.content[0].imgUrl}
+                  //     className={styles.timeNodeContentImg}
+                  //     alt={item.content[0].describe}
+                  //   />
+                  //   <Box className={styles.timeNodeContentDetail}>
+                  //     <Typography
+                  //       fontSize={'3.6rem'}
+                  //       fontWeight={800}
+                  //       lineHeight={1.5}
+                  //       fontFamily={'HC'}
+                  //     >
+                  //       {item.year}
+                  //     </Typography>
+                  //     <Typography
+                  //       fontSize={'2rem'}
+                  //       fontWeight={800}
+                  //       lineHeight={1.5}
+                  //       fontFamily={'HC'}
+                  //     >
+                  //       {item.content[0].describe}
+                  //     </Typography>
+                  //   </Box>
+                  // </Box>
+
                   <Box
                     key={item.id}
                     className={styles.timeNodeContent}
@@ -351,77 +383,39 @@ const OurJourney = () => {
                       flexShrink: 0,
                     }}
                   >
-                    <img
-                      src={item.content[0].imgUrl}
-                      className={styles.timeNodeContentImg}
-                      alt={item.content[0].describe}
-                    />
-                    <Box className={styles.timeNodeContentDetail}>
-                      <Typography
-                        fontSize={'3.6rem'}
-                        fontWeight={800}
-                        lineHeight={1.5}
-                        fontFamily={'HC'}
-                      >
-                        {item.year}
-                      </Typography>
-                      <Typography
-                        fontSize={'2rem'}
-                        fontWeight={800}
-                        lineHeight={1.5}
-                        fontFamily={'HC'}
-                      >
-                        {item.content[0].describe}
-                      </Typography>
-                    </Box>
+                    <Slider key={item.id} {...sliderConfig} className={styles.sliderContainer}>
+                      {item.content.map((child, index) => (
+                        <Box key={index} className={styles.timeNodeContent}>
+                          <img
+                            src={child.imgUrl}
+                            className={styles.timeNodeContentImg}
+                            alt={child.describe}
+                          />
+                          <Box className={styles.timeNodeContentDetail}>
+                            <Typography
+                              fontSize={'3.6rem'}
+                              fontWeight={800}
+                              lineHeight={1.5}
+                              fontFamily={'HC'}
+                            >
+                              {item.year}
+                            </Typography>
+                            <Typography
+                              fontSize={'2rem'}
+                              fontWeight={800}
+                              lineHeight={1.5}
+                              fontFamily={'HC'}
+                            >
+                              {child.describe}
+                            </Typography>
+                          </Box>
+                        </Box>
+                      ))}
+                    </Slider>
                   </Box>
-                  // <Slider key={item.id} {...sliderConfig} className={styles.sliderContainer}>
-                  //   {item.content.map((child, index) => (
-                  //     <Box key={index} className={styles.timeNodeContent}>
-                  //       <img
-                  //         src={child.imgUrl}
-                  //         className={styles.timeNodeContentImg}
-                  //         alt={child.describe}
-                  //       />
-                  //       <Box className={styles.timeNodeContentDetail}>
-                  //         <Typography
-                  //           fontSize={'3.6rem'}
-                  //           fontWeight={800}
-                  //           lineHeight={1.5}
-                  //           fontFamily={'HC'}
-                  //         >
-                  //           {item.year}
-                  //         </Typography>
-                  //         <Typography
-                  //           fontSize={'2rem'}
-                  //           fontWeight={800}
-                  //           lineHeight={1.5}
-                  //           fontFamily={'HC'}
-                  //         >
-                  //           {child.describe}
-                  //         </Typography>
-                  //       </Box>
-                  //     </Box>
-                  //   ))}
-                  // </Slider>
                 ))}
               </Box>
             </Box>
-            // <Box className={styles.timeNodeContent}>
-            //   <img
-            //     src={selectedNode.imgUrl}
-            //     className={styles.timeNodeContentImg}
-            //     alt={selectedNode.describe}
-            //   />
-            //   <Box className={styles.timeNodeContentDetail}>
-            //     <Typography fontSize={'3.6rem'} fontWeight={800} lineHeight={1.5} fontFamily={'HC'}>
-            //       {selectedNode.year}
-            //     </Typography>
-            //     <Typography fontSize={'2rem'} fontWeight={800} lineHeight={1.5} fontFamily={'HC'}>
-            //       {selectedNode.describe}
-            //     </Typography>
-            //   </Box>
-            // </Box>
           )}
         </Box>
 
