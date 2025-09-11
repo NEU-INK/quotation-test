@@ -51,7 +51,6 @@ const ProductsList: React.FC = () => {
     setShowSubcategories(true) // 显示子类别
   }
   // {/*onMouseEnter={() => handleCategoryClick(category.category)} // 鼠标悬停显示子类*/}
-  //
   // {/*onClick={() => handleSubcategoryClick(subcategory)} // 选择子类*/}
   // const handleSubcategoryClick = (subcategory: string) => {
   //     setSelectedSubcategory(subcategory);
