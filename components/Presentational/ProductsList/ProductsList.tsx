@@ -3,20 +3,30 @@ import { Typography, Box, Button, MenuItem, IconButton, Breadcrumbs, Link } from
 import { ArrowUpward, ArrowDownward } from '@mui/icons-material'
 import styles from './ProductsList.module.scss'
 import { useDevice } from '../../../utils/deviceContext'
-import { products } from '../../../constants/products'
-// import Image from "next/image";
+import {
+  SocksList,
+  GraphicTShirtList,
+  PerformanceList,
+  ShapewearList,
+} from '../../../constants/products'
 
 const isNav = false
 const isSX = false
 
+enum Category {
+  Socks = 'Socks',
+  GraphicTShirt = 'Graphic T-SHRIT',
+  Performance = 'Performance',
+  Shapewear = 'Shapewear',
+}
+
 // 一级和二级菜单选项
 const categories = [
   // { category: 'All', subcategories: [] },
-  { category: 'WHOLESALE', subcategories: [] },
-  { category: 'Socks', subcategories: [] },
-  { category: 'Graphic T-SHRIT', subcategories: [] },
-  { category: 'Performance', subcategories: [] },
-  { category: 'Shapewear', subcategories: [] },
+  { category: Category.Socks, subcategories: [] },
+  { category: Category.GraphicTShirt, subcategories: [] },
+  { category: Category.Performance, subcategories: [] },
+  { category: Category.Shapewear, subcategories: [] },
 
   // { category: 'Socks', subcategories: ['No Show Socks'] },
   // { category: 'Cycling Jersey', subcategories: ['Men\'s Cycling Jersey'] },
@@ -27,17 +37,31 @@ const categories = [
 const ProductsList: React.FC = () => {
   const { isMobile } = useDevice()
 
-  const [selectedCategory, setSelectedCategory] = useState('WHOLESALE')
+  const [selectedCategory, setSelectedCategory] = useState<Category | string>(Category.Socks)
   const [selectedSubcategory, setSelectedSubcategory] = useState<string | null>(null)
   const [showSubcategories, setShowSubcategories] = useState(false)
   const [sortOption, setSortOption] = useState({ field: 'price', order: 'asc' })
 
-  // 过滤和排序产品
-  const filteredProducts = products.filter((product) => {
-    const categoryMatch = selectedCategory === 'All' || product.category === selectedCategory
-    const subcategoryMatch = !selectedSubcategory || product.subcategory === selectedSubcategory
-    return categoryMatch && subcategoryMatch
-  })
+  // // 过滤和排序产品
+  // const filteredProducts = products.filter((product) => {
+  //   const categoryMatch = selectedCategory === 'All' || product.category === selectedCategory
+  //   const subcategoryMatch = !selectedSubcategory || product.subcategory === selectedSubcategory
+  //   return categoryMatch && subcategoryMatch
+  // })
+
+  const productList =
+    selectedCategory === Category.Socks
+      ? SocksList
+      : selectedCategory === Category.GraphicTShirt
+      ? GraphicTShirtList
+      : selectedCategory === Category.Performance
+      ? PerformanceList
+      : selectedCategory === Category.Shapewear
+      ? ShapewearList
+      : []
+  const filteredProducts = productList.filter(
+    (item) => !selectedSubcategory || item.subcategory === selectedSubcategory
+  )
 
   const sortedProducts = filteredProducts.sort((a, b) => {
     const priceA = parseFloat(a.price.replace('$', ''))
@@ -152,7 +176,6 @@ const ProductsList: React.FC = () => {
         {categories.map((category, index) => (
           <Box key={category.category}>
             <Box
-              onClick={() => handleCategoryClick(category.category)} // 鼠标悬停显示子类
               sx={{
                 fontSize: '2.76rem',
                 fontFamily: 'HS',
@@ -170,6 +193,7 @@ const ProductsList: React.FC = () => {
                 }`,
                 color: `${selectedCategory === category.category ? '#fff' : 'var(--base-blue)'}`,
               }}
+              onClick={() => handleCategoryClick(category.category)} // 鼠标悬停显示子类
             >
               {category.category}
             </Box>

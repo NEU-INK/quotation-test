@@ -121,6 +121,15 @@ export const homeData = {
   videos: [
     {
       type: 2,
+      src: '/images/home/sep2025.jpg',
+      poster: '/video/home-lbt3.jpg',
+      header: '',
+      description: '',
+      btnText: '',
+      btnLink: '',
+    },
+    {
+      type: 2,
       // src: "/video/home-lbt3.jpg",
       // src: "home-top-lbt-2.jpg",
       src: '/images/home/home-lbt3.jpg',
