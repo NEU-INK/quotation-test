@@ -120,22 +120,23 @@ const HomeContainer = () => {
                   >
                     {video.header}
                   </Typography>
-
-                  <WaltButton
-                    text={video.btnText}
-                    icon="./icons/walttec/home-shopping-cart.png" // 使用图片路径
-                    iconPosition="left"
-                    borderColor="white"
-                    textColor="white"
-                    onClick={() => router.push(video.btnLink)}
-                    hoverBackgroundColor="#003680"
-                    hoverBorderColor="#003680"
-                    hoverTextColor="white"
-                    activeBackgroundColor="#003680"
-                    activeBorderColor="#003680"
-                    activeTextColor="white"
-                    style={{ fontSize: `${isMobile ? '2rem' : '2.6rem'}` }} // 传入自定义样式
-                  />
+                  {video.btnText && (
+                    <WaltButton
+                      text={video.btnText}
+                      icon="./icons/walttec/home-shopping-cart.png" // 使用图片路径
+                      iconPosition="left"
+                      borderColor="white"
+                      textColor="white"
+                      onClick={() => router.push(video.btnLink)}
+                      hoverBackgroundColor="#003680"
+                      hoverBorderColor="#003680"
+                      hoverTextColor="white"
+                      activeBackgroundColor="#003680"
+                      activeBorderColor="#003680"
+                      activeTextColor="white"
+                      style={{ fontSize: `${isMobile ? '2rem' : '2.6rem'}` }} // 传入自定义样式
+                    />
+                  )}
                 </Box>
               )}
             </Box>
