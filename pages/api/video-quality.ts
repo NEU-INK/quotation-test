@@ -1,7 +1,7 @@
 import { NextApiRequest, NextApiResponse } from 'next'
 
 // const videoBaseUrl = 'https://walttec.shop/walttec-file/video'; // 视频资源基础路径
-const videoBaseUrl = 'http://video.walttec.shop/walttec-file/video'
+const videoBaseUrl = 'https://video.walttec.shop/walttec-file/video'
 
 const videoMap = {
   'hdgc-1080p': `${videoBaseUrl}/hdgc/hdgc-1080/1080p.m3u8`,
