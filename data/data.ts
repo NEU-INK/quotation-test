@@ -129,6 +129,19 @@ export const homeData = {
       btnLink: '',
     },
     {
+      type: 1,
+      name: 'introduction',
+      src: '/video/xcsp1.mp4',
+      poster: '/video/xcsplst1.jpg',
+      header: '',
+      text1: '',
+      text2: '',
+      text3: '',
+      description: '',
+      btnText: '',
+      btnLink: '',
+    },
+    {
       type: 2,
       // src: "/video/home-lbt3.jpg",
       // src: "home-top-lbt-2.jpg",
@@ -168,7 +181,6 @@ export const homeData = {
       description: 'For The Future And Beyond, We Are Ready',
       btnText: ' PLACE CUSTOM ORDER',
       btnLink: '/contact-us',
-
       // btnLink: "/about-us-learn-more",
     },
     {
@@ -259,7 +271,6 @@ export const sustainabilityData = {
     },
     {
       img: '/images/walt/ai/imgAI10.png',
-
       title: 'We use high efficient dyeing equipment to conserve water',
       description:
         'We invest in renewable energy sources to power our facilities and reduce reliance on fossil fuels.',

@@ -50,7 +50,7 @@ const HeaderMenuItem: React.FC<HeaderMenuItemProps> = ({
           '&:hover': {
             color: 'var(--hover-blue)',
           },
-          padding: '6px 2rem',
+          padding: '6px 1rem',
         }}
       >
         <Typography

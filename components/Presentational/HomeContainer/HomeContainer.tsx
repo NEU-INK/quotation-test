@@ -94,21 +94,23 @@ const HomeContainer = () => {
                     {video.text3}
                   </Typography>
 
-                  <WaltButton
-                    text={video.btnText}
-                    icon="./icons/walttec/home-shopping-cart.png"
-                    iconPosition="left"
-                    borderColor="white"
-                    textColor="white"
-                    hoverBackgroundColor="var(--base-blue)"
-                    hoverBorderColor="var(--base-blue)"
-                    hoverTextColor="white"
-                    activeBackgroundColor="var(--base-blue)"
-                    activeBorderColor="var(--base-blue)"
-                    activeTextColor="white"
-                    style={{ fontSize: `${isMobile ? '2rem' : '2.6rem'}` }}
-                    onClick={() => router.push(video.btnLink)}
-                  />
+                  {video.btnText && (
+                    <WaltButton
+                      text={video.btnText}
+                      icon="./icons/walttec/home-shopping-cart.png"
+                      iconPosition="left"
+                      borderColor="white"
+                      textColor="white"
+                      hoverBackgroundColor="var(--base-blue)"
+                      hoverBorderColor="var(--base-blue)"
+                      hoverTextColor="white"
+                      activeBackgroundColor="var(--base-blue)"
+                      activeBorderColor="var(--base-blue)"
+                      activeTextColor="white"
+                      style={{ fontSize: `${isMobile ? '2rem' : '2.6rem'}` }}
+                      onClick={() => router.push(video.btnLink)}
+                    />
+                  )}
                 </Box>
               ) : (
                 <Box position="absolute" bottom="15%" left="6%" color="white">

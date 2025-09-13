@@ -4,6 +4,9 @@ import { NextApiRequest, NextApiResponse } from 'next'
 const videoBaseUrl = 'https://video.walttec.shop/walttec-file/video'
 
 const videoMap = {
+  'introduction-1080p': `${videoBaseUrl}/introduction/introduction-1080/1080p.m3u8`,
+  'introduction-720p': `${videoBaseUrl}/introduction/introduction-720/720p.m3u8`,
+  'introduction-480p': `${videoBaseUrl}/introduction/introduction-480/480p.m3u8`,
   'hdgc-1080p': `${videoBaseUrl}/hdgc/hdgc-1080/1080p.m3u8`,
   'hdgc-720p': `${videoBaseUrl}/hdgc/hdgc-720/720p.m3u8`,
   'hdgc-480p': `${videoBaseUrl}/hdgc/hdgc-480/480p.m3u8`,
