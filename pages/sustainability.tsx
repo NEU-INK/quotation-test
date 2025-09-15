@@ -251,7 +251,7 @@ const Sustainability = () => {
             {dataList.map((video, index) => (
               <Box key={index} position="relative">
                 <Box position="relative" width="100%" height="100%">
-                  <VideoPlayer videoId="jpz" quality={quality} />
+                  <VideoPlayer videoId="jpz" quality={quality} poster={video.poster} />
                 </Box>
               </Box>
             ))}
