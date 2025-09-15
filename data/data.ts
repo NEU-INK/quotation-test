@@ -132,7 +132,7 @@ export const homeData = {
       type: 1,
       name: 'introduction',
       src: '/video/xcsp1.mp4',
-      poster: '/video/xcsplst1.jpg',
+      poster: '/images/home/xcsplst2.jpg',
       header: '',
       text1: '',
       text2: '',
@@ -159,7 +159,7 @@ export const homeData = {
       name: 'hdgc',
       src: '/video/xcsp1.mp4',
       // src: "https://asset.cloudinary.com/dq928gtws/b0edac3e74a9c038662754ab6fd9abcb",
-      poster: '/video/xcsplst1.jpg',
+      poster: '/images/home/xcsplst1.jpg',
       // header: "“ FOR THE FUTURE<br> AND BEYOND WE <br>  ARE READY！”",
       header: 'FOR THE FUTURE AND WE ARE READY！',
       text1: 'FOR THE FUTURE',
@@ -187,7 +187,7 @@ export const homeData = {
       name: 'jpz',
       type: 1,
       src: '/video/xcspjpz.mp4', // Update with your actual video paths
-      poster: '/video/xcsplst2.jpg',
+      poster: '/images/home/xcspjpz-bg.png',
       // header:  "WE PARTICIPATE IN SUSTAINABLE DEVELOPMENT！",
       header: 'SUSTAINABLE DEVELOPMENT',
       description:

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 
 import { Box, Typography } from '@mui/material'
-import Slider from 'react-slick'
+import Slider, { LazyLoadTypes } from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 
@@ -29,6 +29,8 @@ const HomeContainer = () => {
     autoplaySpeed: 10000,
     autoplay: true,
     arrows: false,
+    lazyLoad: 'ondemand' as LazyLoadTypes,
+    // lazyLoad: 'anticipated' as LazyLoadTypes,
   }
   const [quality, setQuality] = useState('1080p')
 
@@ -61,7 +63,11 @@ const HomeContainer = () => {
           <Box key={index} position="relative">
             <Box position="relative" width="100%" height="100%">
               {video.type === 1 ? (
-                <VideoPlayer videoId={video.name as string} quality={quality} />
+                <VideoPlayer
+                  videoId={video.name as string}
+                  quality={quality}
+                  poster={video.poster}
+                />
               ) : (
                 // <DynamicImage
                 //     imageName={video.src}

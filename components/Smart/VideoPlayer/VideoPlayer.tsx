@@ -5,9 +5,10 @@ import Hls from 'hls.js'
 type VideoPlayerProps = {
   videoId: string // 视频 ID，用于区分不同视频
   quality: string // 视频分辨率，比如 '1080p', '720p'
+  poster: string
 }
 
-const VideoPlayer: React.FC<VideoPlayerProps> = ({ videoId, quality }) => {
+const VideoPlayer: React.FC<VideoPlayerProps> = ({ videoId, quality, poster }) => {
   const videoRef = useRef<HTMLVideoElement>(null)
 
   useEffect(() => {
@@ -47,6 +48,7 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({ videoId, quality }) => {
       autoPlay
       muted
       style={{ width: '100%', height: 'auto' }} // 宽度 100%，高度自动
+      poster={poster}
     />
   )
 }
